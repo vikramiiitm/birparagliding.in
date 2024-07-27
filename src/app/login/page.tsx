@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Axios from "axios";
 
-export default function SignUpPage() {
+export default function SignInPage() {
   const [user, setUser] = useState({
-    username: "",
     email: "",
     password: "",
   });
@@ -18,28 +17,28 @@ export default function SignUpPage() {
   const router = useRouter();
 
   useEffect(() => {
-    if (user.username.length > 0 && user.email.length > 0 && user.password.length > 0) {
+    if (user.email.length > 0 && user.password.length > 0) {
       setButtonDisabled(false);
     } else {
       setButtonDisabled(true);
     }
   }, [user]);
 
-  const onSignup = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
+  const onSignIn = async (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent the default form submission
 
     setLoading(true);
-    setErrorMessage(""); // Reset the error message
+    setErrorMessage(""); // Clear any previous error messages
 
     try {
-      const response = await Axios.post("/api/signup", user);
-      console.log("Signup Success", response.data);
-      if (response.status === 201) {
-        router.push("/login");
-      }
+      const response = await Axios.post("/api/login", user); // Use appropriate API endpoint for login
+      console.log("Login Success:", response.data);
+      router.push("/profile");
     } catch (error: any) {
-      console.log("Signup failed", error);
-      setErrorMessage(error.response?.data?.message || "An error occurred"); // Display server-side validation errors
+      console.log("Login failed:", error);
+      setErrorMessage(
+        error.response?.data?.message || "An error occurred during login."
+      ); // Display error message
     } finally {
       setLoading(false);
     }
@@ -47,16 +46,9 @@ export default function SignUpPage() {
 
   return (
     <div>
-      <h1>{loading ? "Loading....." : "Signup"}</h1>
+      <h1>{loading ? "Loading....." : "Login"}</h1>
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-      <form onSubmit={onSignup}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          value={user.username}
-          onChange={(e) => setUser({ ...user, username: e.target.value })}
-        />
+      <form onSubmit={onSignIn}>
         <label htmlFor="email">Email</label>
         <input
           type="email"
@@ -68,12 +60,12 @@ export default function SignUpPage() {
         <input
           type="password"
           id="password"
-          value={user.password}
           autoComplete="current-password"
+          value={user.password}
           onChange={(e) => setUser({ ...user, password: e.target.value })}
         />
         <button type="submit" disabled={buttonDisabled}>
-          {buttonDisabled ? "No Signup" : "Signup"}
+          {buttonDisabled ? "No Login" : "Login"}
         </button>
       </form>
     </div>

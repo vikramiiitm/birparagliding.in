@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const MONGO_URI = process.env.MONGO_URI as string;
 
-const connectDB = async () => {
+export const dbConnect = async () => {
   const connectionState = mongoose.connection.readyState;
   if (connectionState === 1) {
     console.log("Already connected to database");
@@ -14,10 +14,7 @@ const connectDB = async () => {
   }
 
   try {
-    mongoose.connect(MONGO_URI, {
-      dbName: "sky",
-      bufferCommands: true,
-    });
+    mongoose.connect(MONGO_URI);
     console.log("Connected to database");
   } catch (error) {
     console.log("Error connecting to database", error);
@@ -25,4 +22,3 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB;
