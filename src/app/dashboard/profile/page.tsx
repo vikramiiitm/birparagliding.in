@@ -17,7 +17,7 @@ export default function ProfilePage() {
         try {
 
            await Axios.get("/api/user/logout")
-           router.push("/login")
+           router.push("/auth/login")
             
         } catch (error) {
             console.log(error)

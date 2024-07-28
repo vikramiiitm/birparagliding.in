@@ -40,7 +40,7 @@ const UserProfile = ({ params }: any) => {
       <h2>Update User</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>UserId:</label>
+          <label>UserId: </label>
           <input type="text" value={params.id} readOnly required />
         </div>
         <div>
