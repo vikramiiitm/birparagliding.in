@@ -31,7 +31,7 @@ export default function SignInPage() {
     setErrorMessage(""); // Clear any previous error messages
 
     try {
-      const response = await Axios.post("/api/login", user); // Use appropriate API endpoint for login
+      const response = await Axios.post("/api/user/login", user); // Use appropriate API endpoint for login
       console.log("Login Success:", response.data);
       router.push("/profile");
     } catch (error: any) {

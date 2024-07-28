@@ -13,7 +13,7 @@ const UserProfile = ({ params }: any) => {
     e.preventDefault();
 
     try {
-      const response = await Axios.patch("/api/user-update", {
+      const response = await Axios.patch("/api/user/user-update", {
         id: params.id,
         username,
         password,

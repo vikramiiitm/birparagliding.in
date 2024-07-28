@@ -16,7 +16,7 @@ export default function ProfilePage() {
 
         try {
 
-           await Axios.get("/api/logout")
+           await Axios.get("/api/user/logout")
            router.push("/login")
             
         } catch (error) {
@@ -27,7 +27,7 @@ export default function ProfilePage() {
 
 
     const getUserDetails = async () => {
-        const res = await Axios.get("/api/me");
+        const res = await Axios.get("/api/user/me");
         console.log(res.data.data._id);
         setData(res.data.data._id)
         

@@ -32,7 +32,7 @@ export default function SignUpPage() {
     setErrorMessage(""); // Reset the error message
 
     try {
-      const response = await Axios.post("/api/signup", user);
+      const response = await Axios.post("/api/user/signup", user);
       console.log("Signup Success", response.data);
       if (response.status === 201) {
         router.push("/login");
