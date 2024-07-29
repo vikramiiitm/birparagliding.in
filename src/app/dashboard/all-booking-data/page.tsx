@@ -9,9 +9,9 @@ import HashLoader from "react-spinners/HashLoader";
 interface Booking {
   _id: string;
   name: string;
-  package: string;
+  flypackage: string;
   amount: number;
-  number: number;
+  phoneNumber: number;
   email: string;
   orderId: string;
   date: string;
@@ -68,11 +68,6 @@ const Dashboard = () => {
 
   return (
     <div className="p-4 space-y-4">
-     
-
-
-
-
       <Card className="w-full mt-4">
         <CardHeader>
           <CardTitle>All Bookings</CardTitle>
@@ -112,13 +107,13 @@ const Dashboard = () => {
                       {booking.name}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {booking.package}
+                      {booking.flypackage}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.amount}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {booking.number}
+                      {booking.phoneNumber}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.email}
@@ -136,7 +131,6 @@ const Dashboard = () => {
           </div>
         </CardContent>
       </Card>
-     
     </div>
   );
 };
