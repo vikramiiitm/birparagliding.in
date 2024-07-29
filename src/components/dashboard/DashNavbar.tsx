@@ -13,6 +13,16 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter, usePathname } from "next/navigation";
@@ -43,17 +53,18 @@ const Sidebar = () => {
     { name: "Bookings", href: "/dashboard/all-booking-data" },
     { name: "Blog", href: "/dashboard/blog-dashboard" },
     { name: "Contact", href: "/dashboard/contact-data" },
+    { name: "Profile", href: "/dashboard/profile" },
   ];
 
   return (
     <div>
       <div className="w-full h-20 bg-gray-900 text-white drop-shadow-md flex justify-between px-5 items-center">
         <div className="w-full flex justify-start px-5 items-center">
-          <div className="p-4 mb-2">
+          <div className="p-4 ">
             <Image
               src={SkycandyLogo}
               alt="Skycandy Logo"
-              className="w-32"
+              className="w-24 mb-2"
               width={1000}
               height={1000}
             />
@@ -63,11 +74,7 @@ const Sidebar = () => {
               {navItems.map((item) => (
                 <li
                   key={item.href}
-                  className={`mb-2 font-medium ${
-                    pathname === item.href
-                      ? "text-blue-500"
-                      : "hover:text-blue-500 duration-500"
-                  }`}
+                 
                 >
                   <a
                     href={item.href}
@@ -83,13 +90,68 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div className="flex gap-3 md:hidden">
+        <div className="md:hidden ">
+          <Sheet>
+            <SheetTrigger>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+                />
+              </svg>
+            </SheetTrigger>
+            <SheetContent className="w-56">
+              <SheetHeader>
+                <div className="flex flex-col gap-4 mt-6 text-center">
+                  <Link
+                    href="/dashboard"
+                    className="hover:text-yellow-500 duration-500"
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
+                    href="/dashboard/all-booking-data"
+                    className="hover:text-yellow-500 duration-500"
+                  >
+                    Booking
+                  </Link>
+                  <Link
+                    href="/dashboard/blog-dashboard"
+                    className="hover:text-yellow-500 duration-500"
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/dashboard/contact-data"
+                    className="hover:text-yellow-500 duration-500"
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    href="/dashboard/profile"
+                    className="hover:text-yellow-500 duration-500"
+                  >
+                    Profile
+                  </Link>
+                  <button onClick={logout}>Logout</button>
+                </div>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        {/* <div className="flex gap-3 md:hidden">
           <Menubar className="border rounded-lg">
             <MenubarMenu>
               <MenubarTrigger>
-                {/* <Avatar>
-                <AvatarFallback>A</AvatarFallback>
-              </Avatar> */}
                 <span className="text-black font-bold text-xl">A</span>
               </MenubarTrigger>
               <MenubarContent className="bg-white border">
@@ -116,11 +178,46 @@ const Sidebar = () => {
                 </div>
               </MenubarContent>
             </MenubarMenu>
-            <button onClick={logout}>Logout</button>
+            <button onClick={logout} className="flex gap-2">
+              <span>Logout</span>{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-log-out"
+              >
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" x2="9" y1="12" y2="12" />
+              </svg>
+            </button>
           </Menubar>
-        </div>
+        </div> */}
         <div className="hidden md:block">
-          <button onClick={logout}>Logout</button>
+          <button onClick={logout}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="lucide lucide-log-out"
+            >
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" x2="9" y1="12" y2="12" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

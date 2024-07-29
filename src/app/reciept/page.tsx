@@ -1,7 +1,22 @@
+// pages/SuccessPage.tsx
+"use client"
 
 
-import { cookies } from "next/headers";
-import { use } from "react";
+
+
+
+
+
+
+
+
+import axios from "axios"; // Import Axios
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 interface UserRegistration {
   _id: string;
@@ -11,50 +26,133 @@ interface UserRegistration {
   currency: string;
   orderId: string;
   timeSlot: string;
-  phoneNumber: number;
+  phoneNumber: string;
   participants: number;
   duration: string;
   date: string;
   flyDate: string;
 }
 
-async function fetchRegistrations(query: URLSearchParams) {
-  const response = await fetch(`/api/userRegistration?${query.toString()}`, {
-    next: { revalidate: 10 }, // Adjust revalidation time as needed
+function SuccessPage() {
+  const [registrations, setRegistrations] = useState<UserRegistration[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [searchParams, setSearchParams] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    participants: "",
   });
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  const result = await response.json();
-  if (!result.success) {
-    throw new Error(result.error || "Failed to fetch data");
-  }
-  return result.data;
-}
 
-export default async function RegistrationsPage({
-  searchParams,
-}: {
-  searchParams: URLSearchParams;
-}) {
-  const query = new URLSearchParams(searchParams);
-  const [registrations, error] = await use(fetchRegistrations(query)).catch(
-    (err: any) => [[], err.message]
-  );
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setSearchParams((prevParams) => ({
+      ...prevParams,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    if (
+      !searchParams.name ||
+      !searchParams.email ||
+      !searchParams.phoneNumber ||
+      !searchParams.participants
+    ) {
+      setError("Please fill out all fields.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await axios.post("/api/booking/reciept", searchParams);
+
+      if (response.data.success) {
+        setRegistrations(response.data.data);
+      } else {
+        setError(response.data.error || "An unknown error occurred");
+      }
+    } catch (error) {
+      setError(
+         "An error occurred"
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="flex flex-col justify-around items-center p-10">
-      <div className="w-[80%] mx-auto">
-        <div className="px-5 w-full md:w-[80vw] h-[60vh] overflow-hidden pb-5 mt-4">
-          {error && <div>Error: {error}</div>}
-          {registrations.length === 0 && !error && (
-            <div>No registrations found.</div>
-          )}
-          {registrations.length > 0 && (
-            <div>
-              <h2>Your Details</h2>
-              {registrations.map((user: any) => (
-                <div key={user._id}>
+    <>
+    <Navbar/>
+      <div className="flex flex-col justify-around items-center p-10">
+        {/* Search Form */}
+        <Card className="w-full md:w-96 mb-8">
+          <CardHeader>
+            <CardTitle>Find Your Receipt</CardTitle>
+          </CardHeader>
+          <form onSubmit={handleSubmit}>
+            <CardContent className="flex flex-col gap-2">
+              <Input
+                id="name"
+                name="name"
+                type="text"
+                value={searchParams.name}
+                onChange={handleChange}
+                placeholder="Name"
+              />
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={searchParams.email}
+                onChange={handleChange}
+                placeholder="Email"
+              />
+              <Input
+                id="phoneNumber"
+                name="phoneNumber"
+                type="text"
+                value={searchParams.phoneNumber}
+                onChange={handleChange}
+                placeholder="Phone Number"
+              />
+              <Input
+                id="participants"
+                name="participants"
+                type="number"
+                value={searchParams.participants}
+                onChange={handleChange}
+                placeholder="Participants"
+              />
+              <Button
+                type="submit"
+                className="bg-black text-white hover:bg-gray-100 hover:border hover:text-black"
+              >
+                Search
+              </Button>
+            </CardContent>
+          </form>
+        </Card>
+
+        {/* Results */}
+        {loading && <p>Loading...</p>}
+        {error && <p className="text-red-500">Error: {error}</p>}
+        {registrations.length === 0 && !loading && !error && (
+          <p>No registrations found.</p>
+        )}
+
+        {registrations.length > 0 && (
+          <div className="w-[80%] mx-auto">
+            <Card className="px-5 w-full md:w-[80vw] h-full  pb-5 mt-4">
+              <CardHeader>
+                <CardTitle>Your Details</CardTitle>
+              </CardHeader>
+              {registrations.map((user) => (
+                <CardContent key={user._id}>
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr className="border-b">
@@ -111,12 +209,15 @@ export default async function RegistrationsPage({
                       </tr>
                     </tbody>
                   </table>
-                </div>
+                </CardContent>
               ))}
-            </div>
-          )}
-        </div>
+            </Card>
+          </div>
+        )}
       </div>
-    </div>
+      <Footer/>
+    </>
   );
 }
+
+export default SuccessPage;

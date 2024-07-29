@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import HashLoader from "react-spinners/HashLoader";
 
 
 interface Booking {
@@ -52,7 +53,17 @@ const Dashboard = () => {
 
   
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return (
+    <p className="flex mx-auto h-screen justify-center items-center text-6xl">
+      <HashLoader
+        color="#000"
+        loading={loading}
+        size={80}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </p>
+  );
   if (error) return <div>{error}</div>;
 
   return (

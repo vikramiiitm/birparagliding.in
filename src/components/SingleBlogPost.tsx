@@ -6,6 +6,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DOMPurify from "dompurify";
+import HashLoader from "react-spinners/HashLoader";
 
 interface BlogPost {
   title: string;
@@ -47,7 +48,20 @@ const BlogPage: React.FC<{ params: { slug: string } }> = ({ params }) => {
   }, [ params.slug ]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[.9] text-white">
+        {" "}
+        <p className="flex mx-auto h-full justify-center items-center text-6xl">
+          <HashLoader
+            color="#000"
+            loading={loading}
+            size={80}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </p>{" "}
+      </div>
+    );
   }
 
   if (error) {
@@ -61,38 +75,44 @@ const BlogPage: React.FC<{ params: { slug: string } }> = ({ params }) => {
   return (
     <div>
       <Navbar />
-      <div>
-        <h1>{blogPost.title}</h1>
+      <div className="max-w-7xl mx-auto mt-4">
         {blogPost.image && (
           <Image
             src={blogPost.image}
             alt={blogPost.title}
             width={1000}
             height={1000}
-            className="w-[40vw] rounded"
+            className="w-full h-[70vh] object-cover rounded"
           />
         )}
-
+        <div className="flex justify-between mt-4">
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
+            {blogPost.title}
+          </h1>
+          <p>
+            <small>
+              <strong> Date:</strong>{" "}
+              {blogPost.createdAt
+                ? new Date(blogPost.createdAt).toLocaleDateString()
+                : "Unknown"}
+            </small>
+          </p>
+        </div>
         <div
-          className="blog-content"
+          className="blog-content py-4"
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(blogPost.content),
           }}
         />
-        <p>
-          <small>
-            Date:{" "}
-            {blogPost.createdAt
-              ? new Date(blogPost.createdAt).toLocaleDateString()
-              : "Unknown"}
-          </small>
-        </p>
-        <p>
-          <strong>Author:</strong> {blogPost.author}
-        </p>
-        <p>
-          <strong>Tags:</strong> {blogPost.tags?.join(", ") || "No tags"}
-        </p>
+
+        <div className="flex justify-end gap-5 pb-5">
+          <p>
+            <strong>Author:</strong> {blogPost.author}
+          </p>
+          <p>
+            <strong>Tags:</strong> {blogPost.tags?.join(", ") || "No tags"}
+          </p>
+        </div>
       </div>
       <Footer />
     </div>

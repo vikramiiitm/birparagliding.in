@@ -13,6 +13,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import HashLoader from "react-spinners/HashLoader";
 
 ChartJS.register(
   CategoryScale,
@@ -133,7 +134,18 @@ const Dashboard = () => {
     ],
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return (
+     
+      <p className="flex mx-auto h-screen justify-center items-center text-6xl">
+        <HashLoader
+          color="#000"
+          loading={loading}
+          size={80}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </p>
+  );
   if (error) return <div>{error}</div>;
 
   return (

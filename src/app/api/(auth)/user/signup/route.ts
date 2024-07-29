@@ -76,10 +76,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if any user already exists in the database
-    const existingUser = await User.findOne({});
-    if (existingUser) {
+    const existingUser = await User.countDocuments();
+    if (existingUser > 2) {
       return NextResponse.json(
-        { message: "User already exists. Only one user is allowed." },
+        { message: "User already exists. Only two user is allowed." },
         { status: 400 }
       );
     }

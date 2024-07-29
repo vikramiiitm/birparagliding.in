@@ -5,6 +5,8 @@ import TourImg from "../../../public/tourImg.png";
 import TourImportant from "../../../public/tourImport.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+import TourForm from "@/components/TourForm";
 
 function page() {
   return (
@@ -57,7 +59,7 @@ function page() {
           </div>
         </div>
         <div className="w-full h-full md:w-1/2 flex justify-center">
-          tourform button
+        <TourForm/>
         </div>
       </div>
       <Footer />

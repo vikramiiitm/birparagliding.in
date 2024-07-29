@@ -63,9 +63,9 @@ const ContactsPage: React.FC = () => {
         {contacts.map((contact) => (
           <div
             key={contact._id}
-            className="p-4 border rounded-lg shadow-sm bg-white flex gap-4 items-center justify-between"
+            className="p-4 border rounded-lg shadow-sm  flex-col md:flex-row bg-white flex gap-4 items-center justify-between"
           >
-            <div className="flex gap-4 items-center">
+            <div className="flex flex-col md:flex-row gap-4 items-center">
               <div className="text-xl font-bold uppercase text-blue-500">
                
                 {contact.name}

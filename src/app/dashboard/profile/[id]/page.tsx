@@ -3,11 +3,23 @@
 
 import { useState } from "react";
 import Axios from "axios";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { toast } from "react-toastify";
+import Link from "next/link";
 
 const UserProfile = ({ params }: any) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+ 
 
   const handleSubmit = async (e:any) => {
     e.preventDefault();
@@ -22,48 +34,78 @@ const UserProfile = ({ params }: any) => {
       const data = response.data;
 
       if (response.status === 200) {
-        setMessage(`Success: ${data.message}`);
+        console.log(`Success: ${data.message}`);
+        toast.success("Update Successful", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+        });
       } else {
-        setMessage(`Error: ${data.message}`);
+        
+         toast.error("Update Failed", {
+           position: "bottom-center",
+           autoClose: 5000,
+           hideProgressBar: false,
+           closeOnClick: true,
+           pauseOnHover: true,
+         });
       }
     } catch (error: any) {
-      setMessage(
-        error.response
-          ? `Error: ${error.response.data.message}`
-          : "An error occurred while updating the user."
-      );
+     
+       toast.error("Update Failed", {
+         position: "bottom-center",
+         autoClose: 5000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: true,
+       });
     }
   };
 
   return (
-    <div>
-      <h2>Update User</h2>
+    <div className="p-5">
+      <Link
+        href="/dashboard/profile"
+        className=" px-6 hover:bg-gray-900 p-2 bg-black text-white rounded"
+      >
+        {" "}
+        Back{" "}
+      </Link>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>UserId: </label>
-          <input type="text" value={params.id} readOnly required />
-        </div>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Update User</button>
+        <Card className="m-4 w-full md:max-w-4xl mx-auto mt-12">
+          <CardHeader>
+            <CardTitle>Your Profile</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Input type="text" value={params.id} readOnly required />
+          </CardContent>
+          <CardContent>
+            <Input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              placeholder="Enter new username"
+            />
+          </CardContent>
+          <CardContent>
+            <Input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="Enter new password"
+            />
+          </CardContent>
+          <CardContent>
+            <Button type="submit" className="w-full md:w-40 mt-4 md:mt-0">
+              Update User
+            </Button>
+          </CardContent>
+        </Card>
       </form>
-      {message && <p>{message}</p>}
     </div>
   );
 };

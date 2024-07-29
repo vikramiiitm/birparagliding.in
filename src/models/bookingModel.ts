@@ -12,7 +12,7 @@ interface IUserRegistration {
   timeSlot: string;
   phoneNumber: number;
   participants: number;
-  couponCode?: string; // Optional couponCode field
+  code: string; // Optional couponCode field
   flypackage: string;
   duration: string;
   date: Date;
@@ -31,7 +31,7 @@ const UserRegistrationSchema = new Schema<IUserRegistration>({
   participants: { type: Number, required: true },
   flypackage: { type: String, required: true },
   duration: { type: String, required: true },
-  couponCode: { type: String }, // Added couponCode field
+  code: { type: String }, // Added couponCode field
   date: { type: Date, default: Date.now },
   flyDate: { type: Date, required: true }, // Added flyDate field
 });
