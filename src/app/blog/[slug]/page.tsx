@@ -47,7 +47,7 @@ type Props = {
 
 // Fetch blog post data by slug
 const getBlogPostBySlug = async ({ params }: Props) => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
   const response = await fetch(`${baseUrl}/api/blog/${params.slug}`);
   const data = await response.json();
   return data;
