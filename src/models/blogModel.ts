@@ -7,7 +7,7 @@ interface IBlog extends Document {
   tags?: string[];
   createdAt?: Date;
   updatedAt?: Date;
-  slug?: string;
+  slug: string;
   image?: string; // Add image field to store image URL
 }
 
@@ -16,29 +16,29 @@ const BlogSchema: Schema = new Schema(
     title: {
       type: String,
       required: true,
-      trim: true,
     },
     content: {
       type: String,
       required: true,
-      trim: true,
     },
     author: {
       type: String,
       required: true,
-      trim: true,
     },
     tags: {
       type: [String],
       default: [],
     },
-   
+
     image: {
       type: String,
       required: false,
-      trim: true,
     },
-  },
+    slug: {
+      type: String,
+      required: true,
+      unique: true
+  },},
   {
     timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" }, // Update timestamps option
   }
