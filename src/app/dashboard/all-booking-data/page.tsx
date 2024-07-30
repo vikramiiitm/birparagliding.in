@@ -33,7 +33,13 @@ const Dashboard = () => {
         const response = await axios.get("/api/booking/register");
         if (response.data.success) {
           const bookings = response.data.data;
-          setBookings(bookings);
+
+          const sortedPosts = bookings.sort(
+            (a: { createdAt: string | number | Date; }, b: { createdAt: string | number | Date; }) =>
+              new Date(b.createdAt!).getTime() -
+              new Date(a.createdAt!).getTime()
+          );
+          setBookings(sortedPosts);
           
         } else {
           setError("Failed to fetch bookings");

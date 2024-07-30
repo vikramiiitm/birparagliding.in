@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import HashLoader from "react-spinners/HashLoader";
 
 
 
@@ -32,6 +33,27 @@ export default function SignInPage() {
     }
   }, [user]);
 
+  // const onSignIn = async (e: React.FormEvent) => {
+  //   e.preventDefault(); // Prevent the default form submission
+
+  //   setLoading(true);
+  //   setErrorMessage(""); // Clear any previous error messages
+
+  //   try {
+  //     const response = await Axios.post("/api/user/login", user); // Use appropriate API endpoint for login
+  //     console.log("Login Success:", response.data);
+  //     router.push("/dashboard");
+  //   } catch (error: any) {
+  //     console.log("Login failed:", error);
+  //     setErrorMessage(
+  //       error.response?.data?.message || "An error occurred during login."
+  //     ); // Display error message
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+
   const onSignIn = async (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the default form submission
 
@@ -41,23 +63,32 @@ export default function SignInPage() {
     try {
       const response = await Axios.post("/api/user/login", user); // Use appropriate API endpoint for login
       console.log("Login Success:", response.data);
-      router.push("/dashboard");
+      router.push("/dashboard"); // Redirect upon successful login
     } catch (error: any) {
-      console.log("Login failed:", error);
+      console.error("Login failed:", error); // Log the error for debugging
       setErrorMessage(
-        error.response?.data?.message || "An error occurred during login."
-      ); // Display error message
+        error.response?.data?.message || "An error occurred during login." // Display error message
+      );
     } finally {
-      setLoading(false);
+      setLoading(false); // Ensure loading state is reset
     }
   };
 
+
   return (
-    <div className="flex mx-auto flex-col justify-center items-center h-screen relative">
+    <div className="flex mx-auto flex-col justify-center items-center h-screen relative px-5">
       <div>
         <h1>
           {loading ? (
-            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[.9] text-white"> <p className="flex mx-auto h-full justify-center items-center text-6xl" >Loding...</p> </div>
+            <p className="flex mx-auto h-screen justify-center items-center text-6xl">
+              <HashLoader
+                color="#000"
+                loading={loading}
+                size={80}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            </p>
           ) : (
             ""
           )}

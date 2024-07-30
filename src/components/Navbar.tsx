@@ -56,7 +56,7 @@ function Navbar() {
           </MenubarMenu>
           <MenubarMenu>
             <Link href="/tour" className="hover:text-yellow-500 duration-500">
-              Tour Package
+              Paragliding
             </Link>
           </MenubarMenu>
           <MenubarMenu>
@@ -77,7 +77,7 @@ function Navbar() {
           </MenubarMenu>
           <MenubarMenu>
             <Link href="/course" className="hover:text-yellow-500 duration-500">
-              Course
+              Learn Fly
             </Link>
           </MenubarMenu>
         </Menubar>
@@ -122,7 +122,7 @@ function Navbar() {
                   href="/tour"
                   className="hover:text-yellow-500 duration-500"
                 >
-                  Tour Package
+                 Paragliding
                 </Link>
                 <Link
                   href="/contactform"
@@ -134,7 +134,7 @@ function Navbar() {
                   href="/course"
                   className="hover:text-yellow-500 duration-500"
                 >
-                  Course
+                  Learn Fly
                 </Link>
               </div>
             </SheetHeader>

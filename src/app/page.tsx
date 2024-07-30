@@ -15,7 +15,7 @@ import {
 import HeroImg from "../../public/home/HeroM.png";
 import BirMaskImg from "../../public/home/MaskImg.png";
 import HomepageSection4 from "../../public/home/HomepageSection4.png";
-import Pilot from "../../public/home/pilot.png";
+import Pilot from "../../public/ParaIcon.png";
 import Equipments from "../../public/home/paraG.png";
 import Price from "../../public/home/rupee.png";
 import Staff from "../../public/home/customer.png";
@@ -38,8 +38,8 @@ function page() {
           <div className=" bg-black opacity-[.3] w-full object-cover h-[90vh] absolute top-0 -z-10">
             {" "}
           </div>
-          <div className="max-w-3xl mx-auto px-10 pt-40 lg:pt-56 flex flex-col items-center justify-center gap-10">
-            <h1 className="text-5xl md:text-7xl text-center font-bold text-white">
+          <div className="max-w-3xl mx-auto px-10 pt-20 lg:pt-56 flex flex-col items-center justify-center gap-10">
+            <h1 className="text-4xl md:text-7xl text-center font-bold text-white">
               See The World Like A Bird Glide With US
             </h1>
             <Link href="/tour" className="">
@@ -87,14 +87,14 @@ function page() {
               <h1 className="text-3xl md:text-5xl text-center font-bold py-10 md:max-w-sm md:mx-auto">
                 Why You Should Choose Us
               </h1>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:pt-10 ">
+              <div className="grid grid-cols-4 gap-6 md:pt-10 text-xs text-center lg:text-lg ">
                 <div className="flex flex-col items-center">
                   <Image
                     src={Pilot}
                     width={1000}
                     height={1000}
                     alt="icons"
-                    className="w-20 h-20 object-contain"
+                    className="w-16 h-16 object-contain"
                   />
                   <p>Experienced Pilot</p>
                 </div>
@@ -104,7 +104,7 @@ function page() {
                     width={1000}
                     height={1000}
                     alt="icons"
-                    className="w-20 h-20 object-contain"
+                    className="w-16 h-16 object-contain"
                   />
                   <p>Best Equipments</p>
                 </div>
@@ -114,7 +114,7 @@ function page() {
                     width={1000}
                     height={1000}
                     alt="icons"
-                    className="w-20 h-20 object-contain"
+                    className="w-16 h-16 object-contain"
                   />
                   <p>Affordable Prices</p>
                 </div>
@@ -124,7 +124,7 @@ function page() {
                     width={1000}
                     height={1000}
                     alt="icons"
-                    className="w-20 h-20 object-contain"
+                    className="w-16 h-16 object-contain"
                   />
                   <p>Experienced Staff</p>
                 </div>
@@ -133,26 +133,28 @@ function page() {
           </div>
         </section>
 
-        <section className=" px-5 ">
-          <div className="flex flex-col-reverse md:flex-row items-center ">
-            <div className="flex flex-col items-center ">
-              <h1 className="text-3xl md:text-5xl text-center font-bold pt-10 md:pt-0">
+        <section className=" lg:px-5 ">
+          <div className="flex  items-center ">
+            <div className="flex w-1/2 lg:w-full flex-col items-center ">
+              <h1 className="text-xl sm:text-3xl md:text-5xl text-center font-bold  md:pt-0">
                 Wanna Fly High Join SkyCandy School Of Paragliding
               </h1>
-              <Link href="/tour" className=" mt-6">
-                <Button className="flex w-80 lg:w-96 bg-green-500 hover:bg-green-600 ">
+              <Link href="/course" className=" mt-6">
+                <Button className="flex w-32 text-sm md:text-base lg:w-96 bg-green-500 hover:bg-green-600 ">
                   book your Quote
                 </Button>
               </Link>
             </div>
-            <div className=" bg-green-500 rounded"></div>
-            <Image
-              src={HomepageSection4}
-              width={1000}
-              height={1000}
-              alt="BirMaskImg"
-              className="w-[70%] rounded md:rounded-none md:w-full h-[40vh] md:h-[60vh] object-cover object-right md:object-bottom"
-            />
+            {/* <div className=" bg-green-500 rounded"></div> */}
+            <div className="w-1/2 lg:w-full">
+              <Image
+                src={HomepageSection4}
+                width={1000}
+                height={1000}
+                alt="BirMaskImg"
+                className="w-full rounded md:rounded-none md:w-full h-[70vh] md:h-[60vh] object-cover object-left md:object-bottom"
+              />
+            </div>
           </div>
         </section>
 
