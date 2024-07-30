@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface Contact {
   _id: string;
@@ -57,7 +58,13 @@ const ContactsPage: React.FC = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Contact List</h1>
+      <Link
+        href="/dashboard"
+        className=" px-6 hover:bg-gray-900 p-2 bg-black text-white rounded my-5"
+      >
+        Back
+      </Link>
+      <h1 className="mt-4 text-2xl font-bold mb-6">Contact List</h1>
       {error && <p className="text-red-500">{error}</p>}
       <div className="space-y-4">
         {contacts.map((contact) => (
@@ -67,7 +74,6 @@ const ContactsPage: React.FC = () => {
           >
             <div className="flex flex-col md:flex-row gap-4 items-center">
               <div className="text-xl font-bold uppercase text-blue-500">
-               
                 {contact.name}
               </div>
               <div>

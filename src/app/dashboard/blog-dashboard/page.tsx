@@ -52,7 +52,7 @@ const AdminBlogsPage = () => {
   };
 
   const handleUpdate = (slug: string) => {
-    router.push(`/dashboard/blogDashboard/updateBlog/${slug}`); // Replace with your update page path
+    router.push(`/dashboard/blog-dashboard/updateBlog/${slug}`); // Replace with your update page path
   };
 
   const handleDelete = async (slug: string) => {
@@ -98,7 +98,7 @@ const AdminBlogsPage = () => {
         >
           Back
         </Link>
-        <Link href="/dashboard/blogDashboard/create-blog" passHref>
+        <Link href="/dashboard/blog-dashboard/create-blog" passHref>
           <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold flex gap-2 py-2 px-4 rounded">
             <span>
               <svg

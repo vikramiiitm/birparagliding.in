@@ -54,6 +54,7 @@ const Sidebar = () => {
     { name: "Blog", href: "/dashboard/blog-dashboard" },
     { name: "Contact", href: "/dashboard/contact-data" },
     { name: "Profile", href: "/dashboard/profile" },
+    { name: "Coupon Code", href: "/dashboard/coupon-code" },
   ];
 
   return (
@@ -72,10 +73,7 @@ const Sidebar = () => {
           <div className="p-4 hidden md:block">
             <ul className="flex ">
               {navItems.map((item) => (
-                <li
-                  key={item.href}
-                 
-                >
+                <li key={item.href}>
                   <a
                     href={item.href}
                     className={`block py-2 px-4 ${
@@ -134,6 +132,12 @@ const Sidebar = () => {
                     className="hover:text-yellow-500 duration-500"
                   >
                     Contact
+                  </Link>
+                  <Link
+                    href="/dashboard/coupon-code"
+                    className="hover:text-yellow-500 duration-500"
+                  >
+                    Coupon Code
                   </Link>
                   <Link
                     href="/dashboard/profile"

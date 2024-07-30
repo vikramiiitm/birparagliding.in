@@ -69,17 +69,14 @@ function Navbar() {
           </MenubarMenu>
           <MenubarMenu>
             <Link
-              href="/contact"
+              href="/contactform"
               className="hover:text-yellow-500 duration-500"
             >
               Contact
             </Link>
           </MenubarMenu>
           <MenubarMenu>
-            <Link
-              href="/TourCourse"
-              className="hover:text-yellow-500 duration-500"
-            >
+            <Link href="/course" className="hover:text-yellow-500 duration-500">
               Course
             </Link>
           </MenubarMenu>
@@ -122,13 +119,19 @@ function Navbar() {
                   Gallery
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/tour"
+                  className="hover:text-yellow-500 duration-500"
+                >
+                  Tour Package
+                </Link>
+                <Link
+                  href="/contactform"
                   className="hover:text-yellow-500 duration-500"
                 >
                   Contact
                 </Link>
                 <Link
-                  href="/TourCourse"
+                  href="/course"
                   className="hover:text-yellow-500 duration-500"
                 >
                   Course

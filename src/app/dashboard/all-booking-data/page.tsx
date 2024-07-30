@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import HashLoader from "react-spinners/HashLoader";
+import Link from "next/link";
 
 
 interface Booking {
@@ -68,6 +69,12 @@ const Dashboard = () => {
 
   return (
     <div className="p-4 space-y-4">
+      <Link
+        href="/dashboard"
+        className=" px-6 hover:bg-gray-900 p-2 bg-black text-white rounded my-5"
+      >
+        Back
+      </Link>
       <Card className="w-full mt-4">
         <CardHeader>
           <CardTitle>All Bookings</CardTitle>
