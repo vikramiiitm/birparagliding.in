@@ -23,20 +23,20 @@ function page() {
       <div>
         <section className="px-5">
           {/* <h1>images</h1> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto py-20">
-            <Image src={G1} width={1000} height={1000} alt="gallery" />
-            <Image src={G2} width={1000} height={1000} alt="gallery" />
-            <Image src={G3} width={1000} height={1000} alt="gallery" />
-            <Image src={G4} width={1000} height={1000} alt="gallery" />
-            <Image src={G5} width={1000} height={1000} alt="gallery" />
-            <Image src={G6} width={1000} height={1000} alt="gallery" />
-            <Image src={G7} width={1000} height={1000} alt="gallery" />
-            <Image src={G8} width={1000} height={1000} alt="gallery" />
-            <Image src={G9} width={1000} height={1000} alt="gallery" />
-            <Image src={G10} width={1000} height={1000} alt="gallery" />
-            <Image src={G11} width={1000} height={1000} alt="gallery" />
-            <Image src={G12} width={1000} height={1000} alt="gallery" />
-            <Image src={G13} width={1000} height={1000} alt="gallery" />
+          <div className="grid grid-cols-2 sm:grid-cols-4  gap-8 max-w-7xl mx-auto py-20">
+            <Image src={G1} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G2} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G3} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G4} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G5} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G6} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G7} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G8} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G9} width={1000} height={1000} alt="gallery"  className="rounded" />
+            <Image src={G10} width={1000} height={1000} alt="gallery" className="rounded" />
+            <Image src={G11} width={1000} height={1000} alt="gallery" className="rounded" />
+            <Image src={G12} width={1000} height={1000} alt="gallery" className="rounded" />
+            <Image src={G13} width={1000} height={1000} alt="gallery" className="rounded" />
           </div>
         </section>
         <section className="px-5"></section>

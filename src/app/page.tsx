@@ -46,7 +46,7 @@ function page() {
             width={1000}
             height={1000}
             alt="Hero Image paragliding"
-            className="w-full  h-[40vh] md:h-[70vh]  object-cover absolute top-0 -z-20"
+            className="w-full  h-[40vh] md:h-[70vh] object-cover   absolute top-0 -z-20"
           />
         </section>
         <section>

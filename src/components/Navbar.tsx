@@ -36,14 +36,14 @@ function Navbar() {
           <Image
             src={BrandImg}
             alt="brandImg"
-            width={100}
-            height={100}
-            className="w-full h-full object-cover  object-top"
+            width={1000}
+            height={1000}
+            className=" h-full object-cover w-28 ml-6  object-top"
           />
         </Link>
       </div>
       <div className="max-w-fit hidden md:block">
-        <Menubar className="border-none bg-transparent gap-4">
+        <Menubar className="border-none bg-transparent gap-4 text-lg">
           <MenubarMenu>
             <Link href="/" className="hover:text-yellow-500 duration-500">
               Home

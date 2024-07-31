@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import paraTrans from "../../../public/SkyCandy/Course.webp";
+import paraTrans from "../../../public/SkyCandy/Cimag.png";
 import TCp1 from "../../../public/SkyCandy/TCP1.webp";
 import TCp2 from "../../../public/SkyCandy/TCP2.webp";
 import TCp3 from "../../../public/SkyCandy/g9.webp";
@@ -13,8 +13,8 @@ function pages() {
       <Navbar />
       <div className="pb-10">
         <section>
-          <div className=" h-[50vh]  flex relative  ">
-            <div className="flex flex-col gap-3  px-10 text-white items-end justify-center text-end w-full">
+          <div className=" h-[70vh]  flex gap-6 py-10  flex-col-reverse md:flex-row justify-around items-center px-5 md:px-10">
+            <div className="flex flex-col gap-3  px-10 text-black items-start justify-center text-start w-full">
               <h1 className="text-2xl lg:text-4xl font-bold">
                 Sky Candy School Of Paragliding
               </h1>
@@ -23,7 +23,7 @@ function pages() {
               <a
                 href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
-                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit  pr-4 rounded-lg  mt-6"
+                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  mt-6"
                 rel="noopener noreferrer"
               >
                 <Image
@@ -36,13 +36,13 @@ function pages() {
                 <span>Chat with us</span>
               </a>
             </div>
-            <div className="absolute bg-black opacity-[.4] top-0 -z-10 w-full h-[50vh] object-cover object-top lg:object-center"></div>
+            {/* <div className="absolute bg-black opacity-[.4] top-0 -z-10 w-full h-[70vh] object-cover object-top lg:object-center"></div> */}
             <Image
               src={paraTrans}
-              width={900}
-              height={900}
+              width={1000}
+              height={1000}
               alt="courses"
-              className="absolute top-0 -z-20 w-full h-[50vh] object-cover object-top lg:object-center"
+              className="w-full md:w-1/2 h-[60vh] rounded-lg object-cover object-center   "
             />
           </div>
         </section>
