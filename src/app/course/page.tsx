@@ -3,7 +3,7 @@ import React from "react";
 import paraTrans from "../../../public/paraTrans.png";
 import TCp1 from "../../../public/SkyCandy/TCP1.webp";
 import TCp2 from "../../../public/SkyCandy/TCP2.webp";
-import TCp3 from "../../../public/SkyCandy/TCP3.webp";
+import TCp3 from "../../../public/SkyCandy/g9.webp";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -23,7 +23,7 @@ function pages() {
               </p>
               <p className="text-lg font-bold">Duration :- 10 Days</p>
               <a
-                href="http://"
+                href="https://wa.me/+919752319230?text=I'm%20interested%20in%20getting%20a%20quote%20from%20you"
                 target="_blank"
                 className="flex items-center gap-4 text-lg font-bold text-black border justify-center hover:bg-green-500 duration-500 md:max-w-fit py-3 px-6 rounded-lg  mt-6"
                 rel="noopener noreferrer"
@@ -120,54 +120,57 @@ function pages() {
               alt="TCP1"
             />
           </div>
-          <div className=" mt-4 max-w-7xl mx-auto items-center">
-            <h3 className="text-xl font-bold my-4">
-              Days 5-10 :- Theory + Solo Flying (Instructor-Guided via Radio)
-            </h3>
+          <div className=" mt-4 max-w-7xl mx-auto items-center flex flex-col-reverse md:flex-row">
+            <div className=" mt-4 max-w-7xl mx-auto items-center">
+              <h3 className="text-xl font-bold my-4">
+                Days 5-10 :- Theory + Solo Flying (Instructor-Guided via Radio)
+              </h3>
+
+              <h4 className="text-lg font-bold mt-4">Theoretical Lessons:</h4>
+              <ul className="list-disc ml-10 text-sm">
+                <li className="list-disc">
+                  <strong>Flight Mechanics:</strong> Learn about the principles
+                  of flight, including how lift, drag, and gravity affect your
+                  wing.
+                </li>
+                <li className="list-disc">
+                  <strong>Weather Conditions:</strong> Understand how weather
+                  impacts paragliding, including wind patterns, thermals, and
+                  potential hazards.
+                </li>
+                <li className="list-disc">
+                  <strong>Safety Procedures: </strong> Study essential safety
+                  protocols to handle emergencies and ensure a safe flying
+                  experience.
+                </li>
+              </ul>
+              <h4 className="text-lg font-bold mt-4">Solo Flights:</h4>
+              <ul className="list-disc ml-10 text-sm">
+                <li className="list-disc">
+                  <strong>Guided Takeoffs and Landings: </strong>Execute solo
+                  flights with real-time guidance from your instructor via
+                  radio. This support helps you refine your techniques in a
+                  controlled and safe environment.
+                </li>
+                <li className="list-disc">
+                  <strong>In-flight Maneuvers:</strong> Practice and master
+                  various in-flight maneuvers, such as turns, speed control, and
+                  maintaining a straight flight path.
+                </li>
+                <li className="list-disc">
+                  <strong>Progressive Skill Development: </strong> Each flight
+                  builds on the previous one, allowing you to gradually increase
+                  your proficiency and confidence in flying independently.
+                </li>
+              </ul>
+            </div>
             <Image
               src={TCp3}
               width={1000}
               height={1000}
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover object-center sm:h-[25vh] lg:h-[50vh] sm:w-[20vh] lg:w-[30vw]  border"
               alt="TCP1"
             />
-
-            <h4 className="text-lg font-bold mt-4">Theoretical Lessons:</h4>
-            <ul className="list-disc ml-10 text-sm">
-              <li className="list-disc">
-                <strong>Flight Mechanics:</strong> Learn about the principles of
-                flight, including how lift, drag, and gravity affect your wing.
-              </li>
-              <li className="list-disc">
-                <strong>Weather Conditions:</strong> Understand how weather
-                impacts paragliding, including wind patterns, thermals, and
-                potential hazards.
-              </li>
-              <li className="list-disc">
-                <strong>Safety Procedures: </strong> Study essential safety
-                protocols to handle emergencies and ensure a safe flying
-                experience.
-              </li>
-            </ul>
-            <h4 className="text-lg font-bold mt-4">Solo Flights:</h4>
-            <ul className="list-disc ml-10 text-sm">
-              <li className="list-disc">
-                <strong>Guided Takeoffs and Landings: </strong>Execute solo
-                flights with real-time guidance from your instructor via radio.
-                This support helps you refine your techniques in a controlled
-                and safe environment.
-              </li>
-              <li className="list-disc">
-                <strong>In-flight Maneuvers:</strong> Practice and master
-                various in-flight maneuvers, such as turns, speed control, and
-                maintaining a straight flight path.
-              </li>
-              <li className="list-disc">
-                <strong>Progressive Skill Development: </strong> Each flight
-                builds on the previous one, allowing you to gradually increase
-                your proficiency and confidence in flying independently.
-              </li>
-            </ul>
           </div>
 
           <div className=" mt-4 max-w-7xl mx-auto items-center">

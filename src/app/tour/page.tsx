@@ -19,12 +19,30 @@ function page() {
           <div className="flex flex-col gap-2 mt-6">
             <h2 className="text-2xl font-bold">Description</h2>
             <p>
-              Experience the thrill of paragliding with a classic 20-25 minute
-              ride that promises to take your breath away. As you ascend into
-              the sky, you&apos;ll be greeted by spectacular views of the
-              surrounding landscape, including rolling hills, serene lakes, and
+              Experience the thrill of paragliding with our classic and premium
+              rides that promise to take your breath away.
+              <br />
+              <br />
+              Classic: Enjoy a
+              20-25 minute ride that takes you high above the earth. As you
+              ascend into the sky, you&apos;ll be greeted by spectacular views of the
+              surrounding landscape, including rolling hills and
               verdant valleys. Feel the wind in your face and the sense of
               freedom that comes with soaring high above the earth.
+              <br />
+              <br />
+              Premium:
+              Indulge in a 40-45 minute ride for an extended experience. This
+              package offers even more time to soak in the breathtaking views
+              and enjoy the exhilarating feeling of flight. The premium ride
+              ensures you have ample time to appreciate the beauty of the
+              landscape and the thrill of paragliding.
+              <br />
+              <br />
+               Feel the wind in your
+              face and the sense of freedom that comes with soaring high above
+              the earth. Whether you choose the Classic or the Premium ride,
+              you&apos;re in for an unforgettable adventure.
               <br />
               <br />
               Whether you&apos;re new to paragliding or an experienced flyer,
@@ -59,7 +77,7 @@ function page() {
           </div>
         </div>
         <div className="w-full h-full md:w-1/2 flex justify-center">
-        <TourForm/>
+          <TourForm />
         </div>
       </div>
       <Footer />
