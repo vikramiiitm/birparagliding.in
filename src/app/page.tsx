@@ -12,9 +12,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import HeroImg from "../../public/home/HeroM.png";
-import BirMaskImg from "../../public/home/MaskImg.png";
-import HomepageSection4 from "../../public/home/HomepageSection4.png";
+import HeroImg from "../../public/SkyCandy/p.jpeg";
+import BirMaskImg from "../../public/SkyCandy/About.webp";
+import HomepageSection4 from "../../public/SkyCandy/TCP3.webp";
 import Pilot from "../../public/ParaIcon.png";
 import Equipments from "../../public/home/paraG.png";
 import Price from "../../public/home/rupee.png";
@@ -27,36 +27,36 @@ function page() {
     <>
       <Navbar />
       <div>
-        <section className="relative w-full h-[45vh] lg:h-[90vh]">
+        <section className="relative  w-full h-[40vh] md:h-[70vh] flex justify-between items-center  flex-col-reverse lg:flex-row">
+          <div className=" bg-black opacity-[.3] w-full object-cover h-[40vh]  md:h-[70vh] absolute top-0 -z-10">
+            {" "}
+          </div>
+          <div className=" px-10 pt-32 md:pt-64 text-center w-full  flex h-full items-center justify-center gap-10">
+            <h1 className="text-4xl  text-center font-bold text-white">
+              See The World Like A Bird Glide With US
+            </h1>
+            {/* <Link href="/tour" className="">
+              <Button className="flex w-80 lg:w-96 bg-yellow-500 hover:bg-yellow-600 ">
+                book your Quote
+              </Button>
+            </Link> */}
+          </div>
           <Image
             src={HeroImg}
             width={1000}
             height={1000}
             alt="Hero Image paragliding"
-            className=" w-full object-cover h-[45vh] lg:h-[90vh] absolute top-0 -z-10"
+            className="w-full  h-[40vh] md:h-[70vh]  object-cover absolute top-0 -z-20"
           />
-          <div className=" bg-black opacity-[.3] w-full object-cover h-[45vh] lg:h-[90vh] absolute top-0 -z-10">
-            {" "}
-          </div>
-          <div className="max-w-3xl mx-auto px-10 pt-20 lg:pt-56 flex flex-col items-center justify-center gap-10">
-            <h1 className="text-4xl md:text-7xl text-center font-bold text-white">
-              See The World Like A Bird Glide With US
-            </h1>
-            <Link href="/tour" className="">
-              <Button className="flex w-80 lg:w-96 bg-yellow-500 hover:bg-yellow-600 ">
-                book your Quote
-              </Button>
-            </Link>
-          </div>
         </section>
         <section>
-          <div className=" max-w-7xl mx-auto flex flex-col-reverse md:flex-row md:justify-between md:gap-8 items-center px-5 py-10 lg:py-32">
-            <div className="pt-6 md:pt-0 md:w-[50%]">
-              <h1 className="text-3xl md:text-5xl font-bold">
+          <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10">
+            <div className="pt-6 md:pt-0 lg :w-[50%]">
+              <h1 className="text-3xl md:text-4xl font-bold">
                 {" "}
                 Bir Billing Paragliding{" "}
               </h1>
-              <p className="pt-4 text-justify">
+              <p className="py-4 text-justify text-sm md:text-base text-gray-700">
                 Welcome to Bir Billing, the paragliding capital of India and a
                 haven for adventure enthusiasts from around the globe! Nestled
                 in the scenic Dhauladhar Range of the Himalayas, Bir Billing
@@ -68,6 +68,11 @@ function page() {
                 thrill of taking off and gliding effortlessly over this
                 breathtaking scenery is an adventure like no other.
               </p>
+              <Link href="/tour" className="pt-8">
+                <Button className="flex w-full  bg-black hover:bg-gray-900 ">
+                  book your Quote
+                </Button>
+              </Link>
             </div>
 
             <Image
@@ -75,20 +80,20 @@ function page() {
               width={1000}
               height={1000}
               alt="BirMaskImg"
-              className="w-full rounded h-auto  md:w-[50%]"
+              className="w-full lg:w-[50%] rounded h-[50vh] lg:h-[40vh]  object-cover object-center"
             />
           </div>
         </section>
 
         <section>
-          <div className="relative h-[40vh] sm:h-[25vh] lg:h-[80vh] w-full">
-            <div className="bg-gray-100 w-full h-[40vh] sm:h-[25vh] lg:h-[80vh] absolute top-0 -z-10"></div>
-            <div className="md:w-[70%] md:mx-auto px-10 sm:pt-20 ">
-              <h1 className="text-3xl md:text-5xl text-center font-bold py-10 md:max-w-sm md:mx-auto">
+          <div className=" h-full py-10  w-full px-5">
+            {/* <div className="bg-gray-100 w-full h-[40vh] sm:h-[25vh] lg:h-[50vh] absolute top-0 -z-10"></div> */}
+            <div className=" flex flex-col items-center justify-center ">
+              <h1 className="text-3xl md:text-5xl text-center font-bold  py-10 md:max-w-sm md:mx-auto">
                 Why You Should Choose Us
               </h1>
-              <div className="grid grid-cols-4 gap-6 md:pt-10 text-xs text-center lg:text-lg ">
-                <div className="flex flex-col items-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:pt-10 text-xs text-center lg:text-lg ">
+                <div className="flex flex-col border bg-gray-200 h-40 w-40 items-center justify-center p-2 rounded">
                   <Image
                     src={Pilot}
                     width={1000}
@@ -98,7 +103,7 @@ function page() {
                   />
                   <p>Experienced Pilot</p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col border h-40 w-40 bg-gray-200 items-center justify-center p-2 rounded">
                   <Image
                     src={Equipments}
                     width={1000}
@@ -108,7 +113,7 @@ function page() {
                   />
                   <p>Best Equipments</p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col border h-40 w-40 bg-gray-200 items-center justify-center p-2 rounded">
                   <Image
                     src={Price}
                     width={1000}
@@ -118,7 +123,7 @@ function page() {
                   />
                   <p>Affordable Prices</p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col border h-40 w-40 bg-gray-200 items-center justify-center p-2 rounded">
                   <Image
                     src={Staff}
                     width={1000}
@@ -134,31 +139,31 @@ function page() {
         </section>
 
         <section className=" lg:px-5 ">
-          <div className="flex  items-center ">
-            <div className="flex w-1/2 lg:w-full flex-col items-center ">
-              <h1 className="text-xl sm:text-3xl md:text-5xl text-center font-bold  md:pt-0">
+          <div className="flex flex-col-reverse lg:flex-row items-center ">
+            <div className="flex py-4 w-full flex-col items-center ">
+              <h1 className="text-xl md:text-4xl text-center font-bold  md:pt-0">
                 Wanna Fly High Join SkyCandy School Of Paragliding
               </h1>
               <Link href="/course" className=" mt-6">
-                <Button className="flex w-32 sm:w-56 text-sm md:text-base lg:w-96 bg-green-500 hover:bg-green-600 ">
+                <Button className="flex w-56 text-sm md:text-base lg:w-96 bg-green-500 hover:bg-green-600 ">
                   book your Quote
                 </Button>
               </Link>
             </div>
             {/* <div className=" bg-green-500 rounded"></div> */}
-            <div className="w-1/2 lg:w-full">
+            <div className="w-full">
               <Image
                 src={HomepageSection4}
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-full rounded md:rounded-none md:w-full h-[30vh] lg:h-[60vh] object-cover object-left "
+                className="w-full  md:rounded md:w-full h-[40vh] lg:h-[30vh] object-cover object-center "
               />
             </div>
           </div>
         </section>
 
-        <section className="py-10 px-5 bg-gray-100">
+        <section className="py-10 px-5 ">
           <h1 className="text-3xl md:text-5xl text-center font-bold pb-10 italic">
             Review
           </h1>

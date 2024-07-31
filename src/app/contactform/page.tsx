@@ -11,8 +11,6 @@ import Navbar from "@/components/Navbar";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -76,95 +74,93 @@ const ContactPage: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="py-28 px-5 gap-10 items-center justify-center flex flex-col md:flex-row max-w-7xl mx-auto">
+      <div className="py-20 px-5 gap-10 w-full items-center justify-center flex flex-col md:flex-row lg:max-w-7xl lg:mx-auto">
         <div>
-            <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-6 w-full md:w-96"
-          >       
-          <Card>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6  ">
+            <Card>
               <CardHeader>
-              <CardTitle>Get In Touch With Us</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Input
-                id="name"
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Your Name"
-              />
-            </CardContent>
-            <CardContent>
-              <Input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="user@example.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </CardContent>
-            <CardContent>
-              <Input
-                id="phoneNumber"
-                type="tel"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-                placeholder="Phone Number"
-              />
-            </CardContent>
-            <CardContent>
-              <Textarea
-                id="message"
-                name="message"
-                rows={5}
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="Message"
-              />
-            </CardContent>
-           
-            <CardContent>
-              <Button type="submit">Send Message</Button>
-            </CardContent>
-           
-          </Card>
-          
-           
+                <CardTitle>Get In Touch With Us</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Input
+                  id="name"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your Name"
+                />
+              </CardContent>
+              <CardContent>
+                <Input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="user@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </CardContent>
+              <CardContent>
+                <Input
+                  id="phoneNumber"
+                  type="tel"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  required
+                  placeholder="Phone Number"
+                />
+              </CardContent>
+              <CardContent>
+                <Textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  placeholder="Message"
+                />
+              </CardContent>
+
+              <CardContent>
+                <Button type="submit">Send Message</Button>
+              </CardContent>
+            </Card>
 
             {success && <p>{success}</p>}
             {error && <p>{error}</p>}
           </form>
         </div>
 
-        <div className="mt-4 md:mt-0 w-full ">
+        <div className="mt-4 md:mt-0 w-full md:w-1/3 ">
           <Card>
             <CardHeader>
               <CardTitle>Get In Touch</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Contact No : 9736333133, 7550733333</p>
-            </CardContent>
-            <CardContent>
               <p>
-                Email : <a className="text-blue-500" href="mailto:manu@skycandy.in">manu@skycandy.in</a>
+                <strong>Contact No :</strong> 9736333133, 7550733333
               </p>
             </CardContent>
             <CardContent>
               <p>
-                Office: SkyCandy High Adventure Village Kotli,
-                <br /> Bir Billing Road, P.O. Bir, Distt Kangra HP (India) –
+                <strong> Email :</strong>{" "}
+                <a className="text-blue-500" href="mailto:manu@skycandy.in">
+                  manu@skycandy.in
+                </a>
+              </p>
+            </CardContent>
+            <CardContent>
+              <p>
+                <strong>Office: </strong> SkyCandy High Adventure Village Kotli,
+                 Bir Billing Road, P.O. Bir, Distt Kangra HP (India) –
                 176077
               </p>
             </CardContent>
-           
           </Card>
         </div>
       </div>

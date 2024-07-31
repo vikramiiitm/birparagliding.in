@@ -21,16 +21,16 @@ import axios from "axios";
 const TourForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [amount, setAmount] = useState<number>(1500); // default value
+  const [amount, setAmount] = useState<number>(2499); // default value
   const [currency, setCurrency] = useState<string>("INR");
   const [timeSlot, setTimeSlot] = useState<string>("Sun Rise");
   const [phoneNumber, setPhoneNumber] = useState<number>();
   const [participants, setParticipants] = useState<number>(1);
   const [paymentId, setPaymentId] = useState<string | undefined>(undefined);
   const [flyDate, setFlyDate] = useState<string>("");
-  const [totalAmount, setTotalAmount] = useState<number>(1500);
+  const [totalAmount, setTotalAmount] = useState<number>(2499);
   const [flypackage, setFlypackage] = useState<string>("Standard");
-  const [code, setCode] = useState<string>("");
+  const [code, setCode] = useState<string>("FLYCODE199");
   const [discount, setDiscount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -232,7 +232,7 @@ const verifyCoupon = async () => {
       <section className="h-full flex flex-col gap-6 w-full mx-5 sm:mx-10 2xl:mx-auto 2xl:w-[1400px] items-center pt-10">
         <h1 className="text-xl font-bold">Book Your Slot Now</h1>
         <form
-          className="flex flex-col gap-6 w-full sm:w-80"
+          className="flex flex-col gap-6 w-full lg:w-80"
           onSubmit={processPayment}
         >
           <div className="space-y-1">
@@ -333,7 +333,11 @@ const verifyCoupon = async () => {
               onChange={(e) => setCode(e.target.value)}
               placeholder="Enter coupon code"
             />
-            <Button type="button" onClick={verifyCoupon} className="bg-primary">
+            <Button
+              type="button"
+              onClick={verifyCoupon}
+              className="bg-primary mt-2"
+            >
               Apply Coupon
             </Button>
           </div>
@@ -343,11 +347,17 @@ const verifyCoupon = async () => {
         </form>
 
         <Link
-          href="/dashboard/blog-dashboard"
-          className="px-6 hover:bg-gray-900 p-2 bg-black text-white rounded"
+          href="/reciept"
+          className="px-6 w-full text-center hover:bg-gray-900 p-2 bg-black text-white rounded"
         >
           View Receipt
         </Link>
+        <a
+          href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20Flying%20Tour."
+          className="px-6 w-full text-center hover:bg-green-600 p-2 bg-green-500 text-white rounded"
+        >
+          Contact us on Whatsapp
+        </a>
       </section>
     </>
   );

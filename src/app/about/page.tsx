@@ -30,7 +30,7 @@ function page() {
                 <h2 className="text-2xl md:text-4xl  font-bold ">
                   Welcome to SkyCandy!
                 </h2>
-                <p>
+                <p className="text-gray-700">
                   {" "}
                   Established in 2004, SkyCandy has been a premier provider of
                   paragliding services in the picturesque region of Bir Billing.
@@ -41,7 +41,7 @@ function page() {
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className="text-xl md:text-2xl  font-bold ">About Us:</h3>
-                <p>
+                <p className="text-gray-700">
                   {" "}
                   At SkyCandy, we believe in the magic of flight and the beauty
                   of nature. Our team of certified and passionate instructors
@@ -53,7 +53,7 @@ function page() {
               </div>
               <div className="flex flex-col gap-2">
                 <h2 className="text-2xl md:text-4xl  font-bold ">Founder</h2>
-                <p>
+                <p className="text-gray-700">
                   {" "}
                   Manjeet Thakur, the founder and owner of SkyCandy, is a
                   passionate paragliding enthusiast with a vision to share the

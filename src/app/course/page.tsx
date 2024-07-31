@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import paraTrans from "../../../public/paraTrans.png";
+import paraTrans from "../../../public/SkyCandy/Course.webp";
 import TCp1 from "../../../public/SkyCandy/TCP1.webp";
 import TCp2 from "../../../public/SkyCandy/TCP2.webp";
 import TCp3 from "../../../public/SkyCandy/g9.webp";
@@ -11,45 +11,72 @@ function pages() {
   return (
     <>
       <Navbar />
-      <div className="py-10">
+      <div className="pb-10">
         <section>
-          <div className="max-w-7xl h-full md:h-96 mx-auto flex flex-col-reverse md:flex-row py-10 relative px-5 z-10">
-            <div className="flex flex-col gap-3 pt-20 md:pt-0">
-              <h1 className="text-3xl lg:text-5xl font-bold">
+          <div className=" h-[50vh]  flex relative  ">
+            <div className="flex flex-col gap-3  px-10 text-white items-end justify-center text-end w-full">
+              <h1 className="text-2xl lg:text-4xl font-bold">
                 Sky Candy School Of Paragliding
               </h1>
-              <p className="text-lg font-bold">
-                Course :- P1 + P2 Certification
-              </p>
-              <p className="text-lg font-bold">Duration :- 10 Days</p>
+              <p className="text-base ">Course :- P1 + P2 Certification</p>
+              <p className="text-base ">Duration :- 10 Days</p>
               <a
-                href="https://wa.me/+919752319230?text=I'm%20interested%20in%20getting%20a%20quote%20from%20you"
+                href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
-                className="flex items-center gap-4 text-lg font-bold text-black border justify-center hover:bg-green-500 duration-500 md:max-w-fit py-3 px-6 rounded-lg  mt-6"
+                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit  pr-4 rounded-lg  mt-6"
                 rel="noopener noreferrer"
               >
                 <Image
                   src="https://www.vectorlogo.zone/logos/whatsapp/whatsapp-icon.svg"
-                  width={30}
-                  height={30}
+                  width={50}
+                  height={50}
                   alt="whatsapp icon"
+                  className="p-2 rounded-l bg-white"
                 />
                 <span>Chat with us</span>
               </a>
             </div>
+            <div className="absolute bg-black opacity-[.4] top-0 -z-10 w-full h-[50vh] object-cover object-top lg:object-center"></div>
             <Image
               src={paraTrans}
               width={900}
               height={900}
               alt="courses"
-              className="absolute w-56 md:w-[40vw]  top-0 right-0 md:right-32 -z-20"
+              className="absolute top-0 -z-20 w-full h-[50vh] object-cover object-top lg:object-center"
             />
           </div>
         </section>
         <section className="px-5">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center">
-            Course Details
-          </h2>
+          <h2 className="text-3xl mt-4 font-bold text-start">Course Details</h2>
+
+          <div className="py-10 relative">
+            <div className="md:w-full md:h-1 h-full w-1 bg-black absolute left-40 top-0 md:left-0 md:top-36 -z-10"></div>
+            <div className="flex gap-6 flex-col md:flex-row justify-around items-center">
+              <Image
+                src={TCp1}
+                width={1000}
+                height={1000}
+                className="object-cover w-full md:w-[20vw] h-[30vh] rounded-lg "
+                alt="TCP1"
+              />
+
+              <Image
+                src={TCp2}
+                width={1000}
+                height={1000}
+                className="object-cover rounded-lg w-full md:w-[20vw] h-[30vh]"
+                alt="TCP1"
+              />
+              <Image
+                src={TCp3}
+                width={1000}
+                height={1000}
+                className="rounded-lg object-cover object-center w-full md:w-[20vw] h-[30vh]  border"
+                alt="TCP1"
+              />
+            </div>
+          </div>
+
           <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center">
             <div>
               {" "}
@@ -80,13 +107,6 @@ function pages() {
                 </li>
               </ul>
             </div>
-            <Image
-              src={TCp1}
-              width={1000}
-              height={1000}
-              className="object-cover rounded-lg md:w-[20vw]"
-              alt="TCP1"
-            />
           </div>
           <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center">
             <div>
@@ -112,13 +132,6 @@ function pages() {
                 </li>
               </ul>
             </div>
-            <Image
-              src={TCp2}
-              width={1000}
-              height={1000}
-              className="object-cover rounded-lg md:w-[40vw]"
-              alt="TCP1"
-            />
           </div>
           <div className=" mt-4 max-w-7xl mx-auto items-center flex flex-col-reverse md:flex-row">
             <div className=" mt-4 max-w-7xl mx-auto items-center">
@@ -164,13 +177,6 @@ function pages() {
                 </li>
               </ul>
             </div>
-            <Image
-              src={TCp3}
-              width={1000}
-              height={1000}
-              className="rounded-lg object-cover object-center sm:h-[25vh] lg:h-[50vh] sm:w-[20vh] lg:w-[30vw]  border"
-              alt="TCP1"
-            />
           </div>
 
           <div className=" mt-4 max-w-7xl mx-auto items-center">

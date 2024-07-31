@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
-import Brand from "../../public/home/BrandLogo.png";
+import Brand from "../../public/SkyCandy/BrandSkyCandy.png";
 
 function Footer() {
   return (
-    <footer className="pt-10 bg-blue-900 text-white">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-5 md:justify-between">
+    <footer className="pt-10 bg-black text-white">
+      <div className="max-w-7xl py-10 mx-auto flex flex-col md:flex-row px-5 md:justify-between">
         <div>
           <Image
             src={Brand}
@@ -24,7 +24,7 @@ function Footer() {
               About
             </Link>
             <Link className="hover:text-yellow-500 duration-500" href="/tour">
-              TourPackage
+              Paragliding
             </Link>
             <Link
               className="hover:text-yellow-500 duration-500"
@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="p-5 text-center ">
+      <div className="p-5 text-center border-t border-white max-w-4xl mx-auto">
         <p>copyright &copy; 2024 skycandy All Rights Reserved.</p>
       </div>
     </footer>

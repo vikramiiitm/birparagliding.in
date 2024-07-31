@@ -26,11 +26,11 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import Image from "next/image";
-import BrandImg from "../../public/home/BrandLogo.png";
+import BrandImg from "../../public/SkyCandy/BrandSkyCandy.png";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between  px-5  text-white  bg-blue-900  z-50 shadow-md">
+    <nav className="flex items-center justify-between  px-5  text-white py-3  bg-black z-50 shadow-md">
       <div className="relative ">
         <Link href="/">
           <Image
@@ -91,7 +91,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="size-8"
             >
               <path
                 strokeLinecap="round"
@@ -122,7 +122,7 @@ function Navbar() {
                   href="/tour"
                   className="hover:text-yellow-500 duration-500"
                 >
-                 Paragliding
+                  Paragliding
                 </Link>
                 <Link
                   href="/contactform"
