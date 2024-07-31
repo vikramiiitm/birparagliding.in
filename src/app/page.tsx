@@ -27,15 +27,15 @@ function page() {
     <>
       <Navbar />
       <div>
-        <section className="relative w-full h-[90vh]">
+        <section className="relative w-full h-[45vh] lg:h-[90vh]">
           <Image
             src={HeroImg}
             width={1000}
             height={1000}
             alt="Hero Image paragliding"
-            className=" w-full object-cover h-[90vh] absolute top-0 -z-10"
+            className=" w-full object-cover h-[45vh] lg:h-[90vh] absolute top-0 -z-10"
           />
-          <div className=" bg-black opacity-[.3] w-full object-cover h-[90vh] absolute top-0 -z-10">
+          <div className=" bg-black opacity-[.3] w-full object-cover h-[45vh] lg:h-[90vh] absolute top-0 -z-10">
             {" "}
           </div>
           <div className="max-w-3xl mx-auto px-10 pt-20 lg:pt-56 flex flex-col items-center justify-center gap-10">
@@ -81,9 +81,9 @@ function page() {
         </section>
 
         <section>
-          <div className="relative h-[80vh] w-full">
-            <div className="bg-gray-100 w-full h-[80vh] absolute top-0 -z-10"></div>
-            <div className="md:w-[70%] md:mx-auto px-10 md:pt-20 ">
+          <div className="relative h-[40vh] sm:h-[25vh] lg:h-[80vh] w-full">
+            <div className="bg-gray-100 w-full h-[40vh] sm:h-[25vh] lg:h-[80vh] absolute top-0 -z-10"></div>
+            <div className="md:w-[70%] md:mx-auto px-10 sm:pt-20 ">
               <h1 className="text-3xl md:text-5xl text-center font-bold py-10 md:max-w-sm md:mx-auto">
                 Why You Should Choose Us
               </h1>
@@ -140,7 +140,7 @@ function page() {
                 Wanna Fly High Join SkyCandy School Of Paragliding
               </h1>
               <Link href="/course" className=" mt-6">
-                <Button className="flex w-32 text-sm md:text-base lg:w-96 bg-green-500 hover:bg-green-600 ">
+                <Button className="flex w-32 sm:w-56 text-sm md:text-base lg:w-96 bg-green-500 hover:bg-green-600 ">
                   book your Quote
                 </Button>
               </Link>
@@ -152,7 +152,7 @@ function page() {
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-full rounded md:rounded-none md:w-full h-[70vh] md:h-[60vh] object-cover object-left md:object-bottom"
+                className="w-full rounded md:rounded-none md:w-full h-[30vh] lg:h-[60vh] object-cover object-left "
               />
             </div>
           </div>

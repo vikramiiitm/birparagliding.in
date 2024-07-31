@@ -8,6 +8,21 @@ import { Textarea } from "@/components/ui/textarea";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+
+
+
+
+
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -19,7 +34,7 @@ const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
-    phoneNumber: 0,
+    phoneNumber: 9999999999,
     message: "",
   });
   const [error, setError] = useState<string | null>(null);
@@ -61,16 +76,17 @@ const ContactPage: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="py-10">
-        <div></div>
+      <div className="py-28 px-5 gap-10 items-center justify-center flex flex-col md:flex-row max-w-7xl mx-auto">
         <div>
-          <h1>Get In Touch With Us</h1>
-          <form
+            <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-6 w-full sm:w-80"
-          >
-            <div className="space-y-1">
-              <Label htmlFor="name">Full Name</Label>
+            className="flex flex-col gap-6 w-full md:w-96"
+          >       
+          <Card>
+              <CardHeader>
+              <CardTitle>Get In Touch With Us</CardTitle>
+            </CardHeader>
+            <CardContent>
               <Input
                 id="name"
                 type="text"
@@ -78,10 +94,10 @@ const ContactPage: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                placeholder="Your Name"
               />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="email">Email</Label>
+            </CardContent>
+            <CardContent>
               <Input
                 id="email"
                 type="email"
@@ -91,9 +107,8 @@ const ContactPage: React.FC = () => {
                 onChange={handleChange}
                 required
               />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="phoneNumber">Phone Number</Label>
+            </CardContent>
+            <CardContent>
               <Input
                 id="phoneNumber"
                 type="tel"
@@ -101,10 +116,10 @@ const ContactPage: React.FC = () => {
                 value={formData.phoneNumber}
                 onChange={handleChange}
                 required
+                placeholder="Phone Number"
               />
-            </div>
-            <div className="space-y-1">
-              <Label htmlFor="message">Message</Label>
+            </CardContent>
+            <CardContent>
               <Textarea
                 id="message"
                 name="message"
@@ -112,12 +127,45 @@ const ContactPage: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                placeholder="Message"
               />
-            </div>
-            <Button type="submit">Send Message</Button>
+            </CardContent>
+           
+            <CardContent>
+              <Button type="submit">Send Message</Button>
+            </CardContent>
+           
+          </Card>
+          
+           
+
             {success && <p>{success}</p>}
             {error && <p>{error}</p>}
           </form>
+        </div>
+
+        <div className="mt-4 md:mt-0 w-full ">
+          <Card>
+            <CardHeader>
+              <CardTitle>Get In Touch</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>Contact No : 9736333133, 7550733333</p>
+            </CardContent>
+            <CardContent>
+              <p>
+                Email : <a className="text-blue-500" href="mailto:manu@skycandy.in">manu@skycandy.in</a>
+              </p>
+            </CardContent>
+            <CardContent>
+              <p>
+                Office: SkyCandy High Adventure Village Kotli,
+                <br /> Bir Billing Road, P.O. Bir, Distt Kangra HP (India) –
+                176077
+              </p>
+            </CardContent>
+           
+          </Card>
         </div>
       </div>
       <Footer />
