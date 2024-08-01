@@ -232,7 +232,7 @@ const verifyCoupon = async () => {
       <section className="h-full flex flex-col gap-6 w-full mx-5 sm:mx-10 2xl:mx-auto 2xl:w-[1400px] items-center pt-10">
         <h1 className="text-xl font-bold">Book Your Slot Now</h1>
         <form
-          className="flex flex-col gap-6 w-full lg:w-80"
+          className="flex flex-col gap-6 w-full lg:w-full"
           onSubmit={processPayment}
         >
           <div className="space-y-1">

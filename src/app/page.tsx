@@ -14,7 +14,7 @@ import {
 
 import HeroImg from "../../public/SkyCandy/p.jpeg";
 import BirMaskImg from "../../public/SkyCandy/About.webp";
-import HomepageSection4 from "../../public/SkyCandy/TCP3.webp";
+import HomepageSection4 from "../../public/SkyCandy/wtsap.webp";
 import Pilot from "../../public/ParaIcon.png";
 import Equipments from "../../public/home/paraG.png";
 import Price from "../../public/home/rupee.png";
@@ -51,12 +51,12 @@ function page() {
         </section>
         <section>
           <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10">
-            <div className="pt-6 md:pt-0 lg :w-[50%]">
+            <div className="pt-6 md:pt-0 lg:w-[50%]">
               <h1 className="text-3xl md:text-4xl font-bold">
                 {" "}
                 Bir Billing Paragliding{" "}
               </h1>
-              <p className="py-4 text-justify text-sm md:text-base text-gray-700">
+              <p className="py-4 text-sm md:text-base text-gray-700">
                 Welcome to Bir Billing, the paragliding capital of India and a
                 haven for adventure enthusiasts from around the globe! Nestled
                 in the scenic Dhauladhar Range of the Himalayas, Bir Billing
@@ -138,8 +138,8 @@ function page() {
           </div>
         </section>
 
-        <section className=" lg:px-5 ">
-          <div className="flex flex-col-reverse lg:flex-row items-center ">
+        <section className=" px-5 ">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center md:max-w-7xl md:mx-auto">
             <div className="flex py-4 w-full flex-col items-center ">
               <h1 className="text-xl md:text-4xl text-center font-bold  md:pt-0">
                 Wanna Fly High Join SkyCandy School Of Paragliding
@@ -157,7 +157,7 @@ function page() {
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-full  md:rounded md:w-full h-[40vh] lg:h-[30vh] object-cover object-center "
+                className="w-full  md:rounded md:w-full h-[40vh] lg:h-[40vh] object-center "
               />
             </div>
           </div>

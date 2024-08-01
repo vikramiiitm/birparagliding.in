@@ -14,27 +14,34 @@ function page() {
       <Navbar />
       <div className="flex flex-col md:flex-row h-full justify-around max-w-7xl mx-auto gap-10 py-20 px-5">
         <div className="w-full lg:w-1/2">
-          <Image src={TourImg} width={1000} height={800} alt="tour image " className="rounded" />
+          <Image
+            src={TourImg}
+            width={1000}
+            height={800}
+            alt="tour image "
+            className="rounded"
+          />
 
           <div className="flex flex-col gap-2 mt-6">
             <h2 className="text-2xl font-bold">Description</h2>
-            <p className="text-gray-700 text-justify">
+            <p className="text-gray-700 ">
               Experience the thrill of paragliding with our classic and premium
               rides that promise to take your breath away.
               <br />
               <br />
-              Classic: Enjoy a 20-25 minute ride that takes you high above the
-              earth. As you ascend into the sky, you&apos;ll be greeted by
-              spectacular views of the surrounding landscape, including rolling
-              hills and verdant valleys. Feel the wind in your face and the
-              sense of freedom that comes with soaring high above the earth.
+              <strong>Classic:</strong> Enjoy a 20-25 minute ride that takes you
+              high above the earth. As you ascend into the sky, you&apos;ll be
+              greeted by spectacular views of the surrounding landscape,
+              including rolling hills and verdant valleys. Feel the wind in your
+              face and the sense of freedom that comes with soaring high above
+              the earth.
               <br />
               <br />
-              Premium: Indulge in a 40-45 minute ride for an extended
-              experience. This package offers even more time to soak in the
-              breathtaking views and enjoy the exhilarating feeling of flight.
-              The premium ride ensures you have ample time to appreciate the
-              beauty of the landscape and the thrill of paragliding.
+              <strong>Premium:</strong> Indulge in a 40-45 minute ride for an
+              extended experience. This package offers even more time to soak in
+              the breathtaking views and enjoy the exhilarating feeling of
+              flight. The premium ride ensures you have ample time to appreciate
+              the beauty of the landscape and the thrill of paragliding.
               <br />
               <br />
               Feel the wind in your face and the sense of freedom that comes
@@ -55,12 +62,10 @@ function page() {
           <div className="flex flex-col gap-2 mt-4">
             <h2 className="text-2xl font-bold">Points to Remember</h2>
             <div className="flex flex-col-reverse md:flex-row justify-between">
-              <ul className="ml-4 text-black">
-                <li >
-                  * Report 15 min earlier than the slot booking
-                </li>
-                <li>* Listen to the instructor carefully</li>
-                <li>* Have light meal and stay hydrated before gliding</li>
+              <ul className="ml-4 text-black list-disc">
+                <li>Report 15 min earlier than the slot booking</li>
+                <li>Listen to the instructor carefully</li>
+                <li>Have light meal and stay hydrated before gliding</li>
               </ul>
               <span>
                 <Image
