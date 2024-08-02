@@ -27,23 +27,26 @@ function page() {
             <p className="text-gray-700 ">
               Experience the thrill of paragliding with our classic and premium
               rides that promise to take your breath away.
-              <br />
-              <br />
+            </p>
+            <p className="border p-3 rounded border-green-500  bg-green-100 shadow-sm shadow-green-500 text-green-800">
               <strong>Classic:</strong> Enjoy a 20-25 minute ride that takes you
               high above the earth. As you ascend into the sky, you&apos;ll be
               greeted by spectacular views of the surrounding landscape,
               including rolling hills and verdant valleys. Feel the wind in your
               face and the sense of freedom that comes with soaring high above
               the earth.
-              <br />
-              <br />
-              <strong>Premium:</strong> Indulge in a 40-45 minute ride for an
-              extended experience. This package offers even more time to soak in
-              the breathtaking views and enjoy the exhilarating feeling of
-              flight. The premium ride ensures you have ample time to appreciate
-              the beauty of the landscape and the thrill of paragliding.
-              <br />
-              <br />
+            </p>
+            <p className="border rounded p-3 bg-blue-100 border-blue-500 text-blue-800 shadow-sm shadow-blue-500 ">
+              <strong className="">Premium: </strong>
+              <em>
+                Indulge in a 40-45 minute ride for an extended experience. This
+                package offers even more time to soak in the breathtaking views
+                and enjoy the exhilarating feeling of flight. The premium ride
+                ensures you have ample time to appreciate the beauty of the
+                landscape and the thrill of paragliding.
+              </em>
+            </p>
+            <p>
               Feel the wind in your face and the sense of freedom that comes
               with soaring high above the earth. Whether you choose the Classic
               or the Premium ride, you&apos;re in for an unforgettable

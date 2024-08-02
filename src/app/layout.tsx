@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import {Ubuntu} from "next/font/google";
 import "./globals.css";
 import { ToastContainer, toast } from "react-toastify";
   import "react-toastify/dist/ReactToastify.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Ubuntu({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Skycandy",

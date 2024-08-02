@@ -6,7 +6,7 @@ import Brand from "../../public/SkyCandy/BrandSkyCandy.png";
 
 function Footer() {
   return (
-    <footer className="pt-10 bg-black text-white">
+    <footer className="pt-10 bg-[#091739] text-white">
       <div className="max-w-7xl py-10 mx-auto flex flex-col md:flex-row px-5 md:justify-between">
         <div>
           <Image

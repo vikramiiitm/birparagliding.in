@@ -3,7 +3,7 @@
 
 "use client";
 
-import Axios from "axios";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -29,20 +29,27 @@ export default function ProfilePage() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const getUserDetails = async () => {
-      try {
-        const res = await Axios.get("/api/user/me");
-        setUser(res.data.data);
-      } catch (error) {
-        console.error("Failed to fetch user details", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+ useEffect(
+   () => {
+     const getUserDetails = async () => {
+       try {
+         const res = await axios.get("/api/user/me");
+         setUser(res.data.data);
+         
+       } catch (error) {
+         console.error("Failed to fetch user details", error);
+         // You can also return an error response or display an error message to the user
+       } finally {
+         setLoading(false);
+       }
+     };
 
-    getUserDetails();
-  }, []);
+     getUserDetails();
+   },
+   [
+     /* add dependencies here if needed */
+   ]
+ );
 
 
 
