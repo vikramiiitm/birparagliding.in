@@ -81,7 +81,7 @@ function Page() {
             <source src="../../video.mp4" type="video/mp4" />
           </video> */}
         </section>
-        <section className="py-16">
+        <section className="py-10">
           <div>
             <Fade direction="left" triggerOnce>
               <h1 className="text-center text-xl md:text-4xl  font-bold uppercase">
