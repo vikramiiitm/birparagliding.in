@@ -26,8 +26,6 @@ import Footer from "@/components/Footer";
 import WorldMap from "../../public/home/WorldMap.png";
 
 import { Fade } from "react-awesome-reveal";
-        
-
 
 
 
@@ -37,19 +35,22 @@ function page() {
     <>
       <Navbar />
       <div>
-        <section className="relative  w-full h-[22vh] md:h-[70vh] overflow-hidden flex justify-between items-center  flex-col-reverse lg:flex-row">
-          <div className=" bg-black opacity-[.5] w-full object-cover h-[40vh]  md:h-[70vh] absolute top-0 -z-10">
+        <section className="relative  w-full h-full  flex justify-between items-center  flex-col-reverse lg:flex-row">
+          <div className=" bg-black opacity-[.3] w-full absolute top-0 object-cover h-[40vh] md:h-[80vh] -z-5">
             {" "}
           </div>
-          <div className=" px-10 pt-0 md:pt-36 text-center w-full flex-col flex h-full items-center justify-center gap-5">
+          <div className=" px-10 pt-0 top-10 md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-5">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-xl lg:text-5xl  text-center font-bold text-white">
+              <h1 className="text-2xl lg:text-5xl text-center font-bold text-white">
                 See The World Like A Bird Glide With US
               </h1>
+              {/* <h1 className="text-2xl lg:text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">
+                See The World Like A Bird Glide With US
+              </h1> */}
             </Fade>
             <Fade direction="right" triggerOnce>
               <Link href="/tour" className="">
-                <Button className="flex w-full lg:w-96 bg-blue-500 hover:bg-blue-600 ">
+                <Button className="flex w-full lg:w-96 bg-yellow-500 hover:bg-blue-600 ">
                   book your Quote
                 </Button>
               </Link>
@@ -63,15 +64,16 @@ function page() {
             className="w-full lg:block h-[40vh] md:h-[70vh] object-cover   absolute top-0 -z-20"
           /> */}
 
-          <iframe
-            src="https://player.cloudinary.com/embed/?public_id=zemaxil4d8syeom6ryh3&cloud_name=dirsedwao&player[autoplay]=true&player[muted]=true&player[loop]=true&player[fluid]=true&player[seekThumbnails]=false&player[aiHighlightsGraph]=true"
-            width="1000"
-            height="1000"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            className="w-screen  h-[80vh] md:h-[120vh] object-cover object-center  absolute md:-top-56 top-[-14rem] -z-20"
-          ></iframe>
+          <video
+            src="../../video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-[40vh] md:h-[80vh] object-cover -z-10"
+          />
         </section>
-        <section className="">
+        <section className="bg-yellow-500">
           <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10  ">
             <div className="pt-6 md:pt-0 lg:w-[50%]">
               <Fade direction="left" triggerOnce>
@@ -81,7 +83,7 @@ function page() {
                 </h1>
               </Fade>
               <Fade direction="left" triggerOnce>
-                <p className="py-4 text-sm md:text-base text-gray-600">
+                <p className="py-4 text-sm md:text-base text-gray-800">
                   Welcome to Bir Billing, the paragliding capital of India and a
                   haven for adventure enthusiasts from around the globe! Nestled
                   in the scenic Dhauladhar Range of the Himalayas, Bir Billing
@@ -109,7 +111,7 @@ function page() {
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-[100vw] lg:w-[50vw]  rounded h-[50vh] lg:h-[60vh]  object-cover object-center"
+                className="w-[100vw] lg:w-[40vw]  rounded h-[50vh] lg:h-[45vh]  object-cover object-bottom"
               />
             </Fade>
           </div>
@@ -267,3 +269,4 @@ function page() {
 }
 
 export default page;
+
