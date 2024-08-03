@@ -1,9 +1,6 @@
-
-
 "use client";
 
-
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import G1 from "../../../public/SkyCandy/g1.webp";
 import G2 from "../../../public/SkyCandy/g2.webp";
@@ -24,7 +21,9 @@ import Footer from "@/components/Footer";
 const images = [G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13];
 
 function Page() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
+    null
+  );
 
   return (
     <>
@@ -48,7 +47,7 @@ function Page() {
       </div>
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 md:p-10  "
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 md:p-10"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative md:m-10">
