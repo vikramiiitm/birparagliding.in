@@ -37,19 +37,19 @@ function page() {
     <>
       <Navbar />
       <div>
-        <section className="relative  w-full h-[23vh] md:h-[70vh] overflow-hidden flex justify-between items-center  flex-col-reverse lg:flex-row">
+        <section className="relative  w-full h-[22vh] md:h-[70vh] overflow-hidden flex justify-between items-center  flex-col-reverse lg:flex-row">
           <div className=" bg-black opacity-[.5] w-full object-cover h-[40vh]  md:h-[70vh] absolute top-0 -z-10">
             {" "}
           </div>
-          <div className=" px-10 pt-36 md:pt-36 text-center w-full flex-col flex h-full items-center justify-center gap-10">
+          <div className=" px-10 pt-0 md:pt-36 text-center w-full flex-col flex h-full items-center justify-center gap-5">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-3xl lg:text-5xl  text-center font-bold text-white">
+              <h1 className="text-xl lg:text-5xl  text-center font-bold text-white">
                 See The World Like A Bird Glide With US
               </h1>
             </Fade>
             <Fade direction="right" triggerOnce>
               <Link href="/tour" className="">
-                <Button className="flex w-80 lg:w-96 bg-blue-500 hover:bg-blue-600 ">
+                <Button className="flex w-full lg:w-96 bg-blue-500 hover:bg-blue-600 ">
                   book your Quote
                 </Button>
               </Link>
@@ -68,7 +68,7 @@ function page() {
             width="1000"
             height="800"
             allow="autoplay; encrypted-media; picture-in-picture"
-            className="w-screen  h-[70vh] md:h-[120vh] object-cover object-center  absolute md:-top-56 top-[-11.5rem] -z-20"
+            className="w-screen  h-[80vh] md:h-[120vh] object-cover object-center  absolute md:-top-56 top-[-11.5rem] -z-20"
           ></iframe>
         </section>
         <section className="">

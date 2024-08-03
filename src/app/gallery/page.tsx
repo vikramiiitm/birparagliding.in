@@ -29,7 +29,7 @@ function Page() {
   return (
     <>
       <Navbar />
-      <div className="bg-gradient-to-b from-blue-300 to-blue-800">
+      <div className="bg-gradient-to- from-blue-300 to-tranparent">
         <section className="px-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-7xl mx-auto py-20">
             {images.map((image, index) => (
