@@ -11,19 +11,23 @@ function pages() {
   return (
     <>
       <Navbar />
-      <div className="pb-10">
+      <div className=" bg-[#eb]">
         <section>
           <div className=" h-[30vh] md:h-[60vh] relative flex   border    ">
             <div className="flex flex-col md:gap-2  lg:pl-20  top-10 px-10 text-black items-start justify-center text-start w-full">
               <h1 className="text-2xl lg:text-5xl font-bold">
                 Sky Candy School Of Paragliding
               </h1>
-              <p className="text-base lg:text-xl font-bold mt-4">Course :- P1 + P2 Certification</p>
-              <p className="text-base lg:text-xl font-bold">Duration :- 10 Days</p>
+              <p className="text-base lg:text-xl font-bold md:mt-4">
+                Course :- P1 + P2 Certification
+              </p>
+              <p className="text-base lg:text-xl font-bold">
+                Duration :- 10 Days
+              </p>
               <a
                 href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
-                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  mt-6"
+                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  md:mt-6"
                 rel="noopener noreferrer"
               >
                 <Image
@@ -42,7 +46,7 @@ function pages() {
               width={1000}
               height={1000}
               alt="courses"
-              className="w-[40vw] md:w-[30vw] h-[25vh] md:h-[50vh] absolute top-10 -right-1 md:right-20 rounded-lg object-conatin   -z-10 "
+              className="w-[40vw] md:w-[30vw] h-[25vh] md:h-[50vh] absolute top-10 -right-1 md:right-20 rounded-lg object-conatin    "
             />
             <div className="w-full absolute  bottom-0 -z-10  rounded-lg object-cover object-center   ">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -55,17 +59,17 @@ function pages() {
             </div>
           </div>
         </section>
-        <section className="px-5 mt-4">
+        <section className=" p-4 bg-[#e7de7b] ">
           <h2 className="text-3xl mt-1 font-bold text-start">Course Details</h2>
 
           <div className="py-10 relative">
-            <div className="md:w-full md:h-1 h-full w-1 bg-black absolute left-40 top-0 md:left-0 md:top-36 -z-10"></div>
-            <div className="flex gap-6 flex-col md:flex-row justify-around items-center">
+            <div className="md:w-full md:h-1 h-full w-1 bg-black absolute left-40 top-0 md:left-0 md:top-36  "></div>
+            <div className="flex gap-6 flex-col md:flex-row justify-around items-center z-10">
               <Image
                 src={TCp1}
                 width={1000}
                 height={1000}
-                className="object-cover w-full md:w-[20vw] h-[30vh] rounded-lg "
+                className="object-cover w-full md:w-[20vw] h-[30vh] rounded-lg z-10"
                 alt="TCP1"
               />
 
@@ -73,21 +77,21 @@ function pages() {
                 src={TCp2}
                 width={1000}
                 height={1000}
-                className="object-cover rounded-lg w-full md:w-[20vw] h-[30vh]"
+                className="object-cover rounded-lg w-full md:w-[20vw] h-[30vh] z-10"
                 alt="TCP1"
               />
               <Image
                 src={TCp3}
                 width={1000}
                 height={1000}
-                className="rounded-lg object-cover object-center w-full md:w-[20vw] h-[30vh]  border"
+                className="rounded-lg object-cover object-center w-full md:w-[20vw] h-[30vh]  border z-10"
                 alt="TCP1"
               />
             </div>
           </div>
 
-          <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center">
-            <div>
+          <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center bg-[#e7de7b]">
+            <div className="">
               {" "}
               <h3 className="text-xl font-bold">Days 1-3 :- Ground Handling</h3>
               <ul className="list-disc ml-8 text-sm">
@@ -117,7 +121,7 @@ function pages() {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center">
+          <div className=" flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center">
             <div>
               <h3 className="text-xl font-bold">
                 Days 4 :- Tandem Flight with Instructor
@@ -142,51 +146,54 @@ function pages() {
               </ul>
             </div>
           </div>
-          <div className=" mt-4 max-w-7xl mx-auto items-center flex flex-col-reverse md:flex-row">
-            <div className=" mt-4 max-w-7xl mx-auto items-center">
-              <h3 className="text-xl font-bold my-4">
-                Days 5-10 :- Theory + Solo Flying (Instructor-Guided via Radio)
-              </h3>
+            <div className=" mt-4 max-w-7xl mx-auto items-center flex flex-col-reverse md:flex-row">
+              <div className=" mt-4 max-w-7xl mx-auto items-center">
+                <h3 className="text-xl font-bold my-4">
+                  Days 5-10 :- Theory + Solo Flying (Instructor-Guided via
+                  Radio)
+                </h3>
 
-              <h4 className="text-lg font-bold mt-4">Theoretical Lessons:</h4>
-              <ul className="list-disc ml-10 text-sm">
-                <li className="list-disc">
-                  <strong>Flight Mechanics:</strong> Learn about the principles
-                  of flight, including how lift, drag, and gravity affect your
-                  wing.
-                </li>
-                <li className="list-disc">
-                  <strong>Weather Conditions:</strong> Understand how weather
-                  impacts paragliding, including wind patterns, thermals, and
-                  potential hazards.
-                </li>
-                <li className="list-disc">
-                  <strong>Safety Procedures: </strong> Study essential safety
-                  protocols to handle emergencies and ensure a safe flying
-                  experience.
-                </li>
-              </ul>
-              <h4 className="text-lg font-bold mt-4">Solo Flights:</h4>
-              <ul className="list-disc ml-10 text-sm">
-                <li className="list-disc">
-                  <strong>Guided Takeoffs and Landings: </strong>Execute solo
-                  flights with real-time guidance from your instructor via
-                  radio. This support helps you refine your techniques in a
-                  controlled and safe environment.
-                </li>
-                <li className="list-disc">
-                  <strong>In-flight Maneuvers:</strong> Practice and master
-                  various in-flight maneuvers, such as turns, speed control, and
-                  maintaining a straight flight path.
-                </li>
-                <li className="list-disc">
-                  <strong>Progressive Skill Development: </strong> Each flight
-                  builds on the previous one, allowing you to gradually increase
-                  your proficiency and confidence in flying independently.
-                </li>
-              </ul>
+                <h4 className="text-lg font-bold mt-4">Theoretical Lessons:</h4>
+                <ul className="list-disc ml-10 text-sm">
+                  <li className="list-disc">
+                    <strong>Flight Mechanics:</strong> Learn about the
+                    principles of flight, including how lift, drag, and gravity
+                    affect your wing.
+                  </li>
+                  <li className="list-disc">
+                    <strong>Weather Conditions:</strong> Understand how weather
+                    impacts paragliding, including wind patterns, thermals, and
+                    potential hazards.
+                  </li>
+                  <li className="list-disc">
+                    <strong>Safety Procedures: </strong> Study essential safety
+                    protocols to handle emergencies and ensure a safe flying
+                    experience.
+                  </li>
+                </ul>
+                <h4 className="text-lg font-bold mt-4">Solo Flights:</h4>
+                <ul className="list-disc ml-10 text-sm">
+                  <li className="list-disc">
+                    <strong>Guided Takeoffs and Landings: </strong>Execute solo
+                    flights with real-time guidance from your instructor via
+                    radio. This support helps you refine your techniques in a
+                    controlled and safe environment.
+                  </li>
+                  <li className="list-disc">
+                    <strong>In-flight Maneuvers:</strong> Practice and master
+                    various in-flight maneuvers, such as turns, speed control,
+                    and maintaining a straight flight path.
+                  </li>
+                  <li className="list-disc">
+                    <strong>Progressive Skill Development: </strong> Each flight
+                    builds on the previous one, allowing you to gradually
+                    increase your proficiency and confidence in flying
+                    independently.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          
 
           <div className=" mt-4 max-w-7xl mx-auto items-center">
             <div>

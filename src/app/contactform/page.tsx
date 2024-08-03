@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="bg-[#e7de7b]">
       <Navbar />
       <div className="  w-full items-center justify-center flex flex-col md:flex-row ">
         <div className="md:w-1/2 w-full p-10">
@@ -136,8 +136,8 @@ const ContactPage: React.FC = () => {
           </form>
         </div>
 
-        <div className="p-10 w-full md:w-1/2 bg-blue-900 md:h-screen flex justify-center items-center">
-          <Card>
+        <div className="p-10 w-full md:w-1/2  md:h-screen flex justify-center items-center">
+          <Card className="bg-yellow-500 ">
             <CardHeader>
               <CardTitle>Get In Touch</CardTitle>
             </CardHeader>

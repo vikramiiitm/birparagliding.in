@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -30,39 +31,33 @@ import { Fade } from "react-awesome-reveal";
 
 
 
-function page() {
+function Page() {
+  
+  const router = useRouter();
+
+
   return (
     <>
       <Navbar />
       <div>
-        <section className="relative  w-full h-full  flex justify-between items-center  flex-col-reverse lg:flex-row">
-          <div className=" bg-black opacity-[.3] w-full absolute top-0 object-cover h-[40vh] md:h-[80vh] -z-5">
-            {" "}
-          </div>
+        <section className="relative  w-full h-full  flex justify-between overflow-hidden items-center  flex-col-reverse lg:flex-row">
           <div className=" px-10 pt-0 top-10 md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-5">
             <Fade direction="left" triggerOnce>
               <h1 className="text-2xl lg:text-5xl text-center font-bold text-white">
                 See The World Like A Bird Glide With US
               </h1>
-              {/* <h1 className="text-2xl lg:text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">
-                See The World Like A Bird Glide With US
-              </h1> */}
             </Fade>
             <Fade direction="right" triggerOnce>
-              <Link href="/tour" className="">
-                <Button className="flex w-full lg:w-96 bg-yellow-500 hover:bg-blue-600 ">
-                  book your Quote
-                </Button>
-              </Link>
+              <Button
+                onClick={() => {
+                  router.push("/tour");
+                }}
+                className="flex w-full lg:w-96 bg-blue-500 hover:bg-blue-600 "
+              >
+                book your Quote
+              </Button>
             </Fade>
           </div>
-          {/* <Image
-            src={HeroImg}
-            width={1000}
-            height={1000}
-            alt="Hero Image paragliding"
-            className="w-full lg:block h-[40vh] md:h-[70vh] object-cover   absolute top-0 -z-20"
-          /> */}
 
           <video
             src="../../video.mp4"
@@ -72,6 +67,16 @@ function page() {
             playsInline
             className="w-full h-[40vh] md:h-[80vh] object-cover -z-10"
           />
+
+          {/* <video
+            width="320"
+            height="240"
+            controls
+            preload="none"
+            className="w-full h-[40vh] md:h-[80vh] object-cover -z-10"
+          >
+            <source src="../../video.mp4" type="video/mp4" />
+          </video> */}
         </section>
         <section className="bg-yellow-500">
           <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10  ">
@@ -98,11 +103,14 @@ function page() {
               </Fade>
 
               <Fade direction="left" triggerOnce>
-                <Link href="/tour" className="pt-8">
-                  <Button className="flex w-full text-white font-semibold  bg-blue-800 hover:bg-blue-600 ">
-                    book your Quote
-                  </Button>
-                </Link>
+                <Button
+                  onClick={() => {
+                    router.push("/tour");
+                  }}
+                  className="flex  w-full text-white font-semibold  bg-blue-800 hover:bg-blue-600 "
+                >
+                  book your Quote
+                </Button>
               </Fade>
             </div>
             <Fade direction="right" triggerOnce>
@@ -137,7 +145,7 @@ function page() {
               </Fade>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:pt-10 text-xs text-center lg:text-lg ">
                 <Fade direction="up" triggerOnce>
-                  <div className="flex flex-col border bg-white h-32 lg:h-56 w-32 lg:w-56 drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border bg-[#e7de7b] h-32 lg:h-56 w-32 lg:w-56 drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Pilot}
                       width={1000}
@@ -150,7 +158,7 @@ function page() {
                 </Fade>
 
                 <Fade direction="left" triggerOnce>
-                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-white drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-[#e7de7b] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Equipments}
                       width={1000}
@@ -163,7 +171,7 @@ function page() {
                 </Fade>
 
                 <Fade direction="down" triggerOnce>
-                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-white drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-[#e7de7b] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Price}
                       width={1000}
@@ -175,7 +183,7 @@ function page() {
                   </div>
                 </Fade>
                 <Fade direction="right" triggerOnce>
-                  <div className="flex flex-col border lg:h-56 lg:w-56 h-32 w-32 bg-white drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border lg:h-56 lg:w-56 h-32 w-32 bg-[#e7de7b] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Staff}
                       width={1000}
@@ -198,11 +206,15 @@ function page() {
                 <h1 className="text-2xl md:text-6xl text-center font-bold  md:pt-0">
                   Enroll in Sky Candy School of Paragliding Courses!
                 </h1>
-                <Link href="/course" className=" mt-6">
-                  <Button className="flex w-56 text-sm md:text-base lg:w-96 bg-blue-900 hover:bg-green-600 ">
+                  <Button
+                    onClick={() => {
+                      router.push("/course");
+                    }}
+                    className="flex mt-4 w-56 text-sm md:text-base lg:w-96 bg-blue-900 hover:bg-green-600 "
+                  >
                     book your Quote
                   </Button>
-                </Link>
+                
               </div>
             </Fade>
             {/* <div className=" bg-green-500 rounded"></div> */}
@@ -268,5 +280,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
 
