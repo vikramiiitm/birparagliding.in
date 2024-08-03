@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import paraTrans from "../../../public/SkyCandy/Cimag.png";
+import paraTrans from "../../../public/paraTrans.png";
 import TCp1 from "../../../public/SkyCandy/TCP1.webp";
 import TCp2 from "../../../public/SkyCandy/TCP2.webp";
 import TCp3 from "../../../public/SkyCandy/g9.webp";
@@ -13,13 +13,13 @@ function pages() {
       <Navbar />
       <div className="pb-10">
         <section>
-          <div className=" h-[70vh]  flex gap-6 py-10  flex-col-reverse md:flex-row justify-around items-center px-5 md:px-10">
-            <div className="flex flex-col gap-3  px-10 text-black items-start justify-center text-start w-full">
-              <h1 className="text-2xl lg:text-4xl font-bold">
+          <div className=" h-[30vh] md:h-[60vh] relative flex   border    ">
+            <div className="flex flex-col md:gap-2  lg:pl-20  top-10 px-10 text-black items-start justify-center text-start w-full">
+              <h1 className="text-2xl lg:text-5xl font-bold">
                 Sky Candy School Of Paragliding
               </h1>
-              <p className="text-base ">Course :- P1 + P2 Certification</p>
-              <p className="text-base ">Duration :- 10 Days</p>
+              <p className="text-base lg:text-xl font-bold mt-4">Course :- P1 + P2 Certification</p>
+              <p className="text-base lg:text-xl font-bold">Duration :- 10 Days</p>
               <a
                 href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
@@ -28,10 +28,10 @@ function pages() {
               >
                 <Image
                   src="https://www.vectorlogo.zone/logos/whatsapp/whatsapp-icon.svg"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                   alt="whatsapp icon"
-                  className="p-2 rounded-l bg-white"
+                  className="p-2 md:w-10 rounded-l bg-white"
                 />
                 <span>Chat with us</span>
               </a>
@@ -42,12 +42,21 @@ function pages() {
               width={1000}
               height={1000}
               alt="courses"
-              className="w-full md:w-1/2 h-[60vh] rounded-lg object-cover object-center   "
+              className="w-[40vw] md:w-[30vw] h-[25vh] md:h-[50vh] absolute top-10 -right-1 md:right-20 rounded-lg object-conatin   -z-10 "
             />
+            <div className="w-full absolute  bottom-0 -z-10  rounded-lg object-cover object-center   ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                  fill="#0099ff"
+                  fill-opacity="1"
+                  d="M0,160L34.3,144C68.6,128,137,96,206,80C274.3,64,343,64,411,90.7C480,117,549,171,617,165.3C685.7,160,754,96,823,106.7C891.4,117,960,203,1029,218.7C1097.1,235,1166,181,1234,160C1302.9,139,1371,149,1406,154.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+                ></path>
+              </svg>
+            </div>
           </div>
         </section>
-        <section className="px-5">
-          <h2 className="text-3xl mt-4 font-bold text-start">Course Details</h2>
+        <section className="px-5 mt-4">
+          <h2 className="text-3xl mt-1 font-bold text-start">Course Details</h2>
 
           <div className="py-10 relative">
             <div className="md:w-full md:h-1 h-full w-1 bg-black absolute left-40 top-0 md:left-0 md:top-36 -z-10"></div>

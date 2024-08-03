@@ -74,8 +74,8 @@ const ContactPage: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <div className="py-20 px-5 gap-10 w-full items-center justify-center flex flex-col md:flex-row lg:max-w-7xl lg:mx-auto">
-        <div>
+      <div className="  w-full items-center justify-center flex flex-col md:flex-row ">
+        <div className="md:w-1/2 w-full p-10">
           <form onSubmit={handleSubmit} className="flex flex-col gap-6  ">
             <Card>
               <CardHeader>
@@ -136,7 +136,7 @@ const ContactPage: React.FC = () => {
           </form>
         </div>
 
-        <div className="mt-4 md:mt-0 w-full md:w-1/3 ">
+        <div className="p-10 w-full md:w-1/2 bg-blue-900 md:h-screen flex justify-center items-center">
           <Card>
             <CardHeader>
               <CardTitle>Get In Touch</CardTitle>
@@ -157,8 +157,7 @@ const ContactPage: React.FC = () => {
             <CardContent>
               <p>
                 <strong>Office: </strong> SkyCandy High Adventure Village Kotli,
-                 Bir Billing Road, P.O. Bir, Distt Kangra HP (India) –
-                176077
+                Bir Billing Road, P.O. Bir, Distt Kangra HP (India) – 176077
               </p>
             </CardContent>
           </Card>

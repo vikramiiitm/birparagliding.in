@@ -24,7 +24,7 @@ function page() {
               About Us
             </h1>
           </div>
-          <div className=" py-20 px-5 bg-blue-500">
+          <div className=" py-20 px-5 bg-blue-800">
             <div className="flex max-w-7xl mx-auto flex-col gap-5 text-yellow-500  ">
               <div className="flex flex-col gap-2  ">
                 <h2 className="text-2xl md:text-4xl  font-bold ">

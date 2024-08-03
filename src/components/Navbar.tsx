@@ -30,7 +30,7 @@ import BrandImg from "../../public/SkyCandy/BrandSkyCandy.png";
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between  px-5  text-white py-3  bg-blue-600 z-50 shadow-md">
+    <nav className="flex items-center justify-between  px-5  text-white py-3  bg-[#091739] z-50 shadow-md">
       <div className="relative ">
         <Link href="/">
           <Image
