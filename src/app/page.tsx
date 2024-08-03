@@ -41,9 +41,12 @@ function Page() {
       <Navbar />
       <div>
         <section className="relative  w-full h-full  flex justify-between overflow-hidden items-center  flex-col-reverse lg:flex-row">
-          <div className=" px-10 pt-0 top-10 md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-5">
+          <div className=" px-10 pt-0 top-20 md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-3 md:gap-10">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-2xl lg:text-5xl text-center font-bold text-white">
+              <h1
+                className="text-2xl lg:text-5xl text-center font-bold text-white"
+                style={{ textShadow: "4px 4px 10px black" }}
+              >
                 See The World Like A Bird Glide With US
               </h1>
             </Fade>
@@ -77,6 +80,15 @@ function Page() {
           >
             <source src="../../video.mp4" type="video/mp4" />
           </video> */}
+        </section>
+        <section className="py-16">
+          <div>
+            <Fade direction="left" triggerOnce>
+              <h1 className="text-center text-xl md:text-4xl  font-bold uppercase">
+                Fly Beyonds Limits With Sky Candy
+              </h1>
+            </Fade>
+          </div>
         </section>
         <section className="bg-yellow-500">
           <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10  ">
@@ -206,15 +218,14 @@ function Page() {
                 <h1 className="text-2xl md:text-6xl text-center font-bold  md:pt-0">
                   Enroll in Sky Candy School of Paragliding Courses!
                 </h1>
-                  <Button
-                    onClick={() => {
-                      router.push("/course");
-                    }}
-                    className="flex mt-4 w-56 text-sm md:text-base lg:w-96 bg-blue-900 hover:bg-green-600 "
-                  >
-                    book your Quote
-                  </Button>
-                
+                <Button
+                  onClick={() => {
+                    router.push("/course");
+                  }}
+                  className="flex mt-4 w-56 text-sm md:text-base lg:w-96 bg-blue-900 hover:bg-green-600 "
+                >
+                  book your Quote
+                </Button>
               </div>
             </Fade>
             {/* <div className=" bg-green-500 rounded"></div> */}
