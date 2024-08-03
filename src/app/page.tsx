@@ -68,7 +68,7 @@ function page() {
             width="1000"
             height="800"
             allow="autoplay; encrypted-media; picture-in-picture"
-            className="w-screen  h-[80vh] md:h-[120vh] object-cover object-center  absolute md:-top-56 top-[-11.5rem] -z-20"
+            className="w-screen  h-[80vh] md:h-[120vh] object-cover object-center  absolute md:-top-56 top-[-14rem] -z-20"
           ></iframe>
         </section>
         <section className="">
