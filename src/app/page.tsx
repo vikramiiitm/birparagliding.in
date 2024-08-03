@@ -66,7 +66,7 @@ function page() {
           <iframe
             src="https://player.cloudinary.com/embed/?public_id=zemaxil4d8syeom6ryh3&cloud_name=dirsedwao&player[autoplay]=true&player[muted]=true&player[loop]=true&player[fluid]=true&player[seekThumbnails]=false&player[aiHighlightsGraph]=true"
             width="1000"
-            height="800"
+            height="1000"
             allow="autoplay; encrypted-media; picture-in-picture"
             className="w-screen  h-[80vh] md:h-[120vh] object-cover object-center  absolute md:-top-56 top-[-14rem] -z-20"
           ></iframe>

@@ -38,7 +38,7 @@ function Navbar() {
             alt="brandImg"
             width={1000}
             height={1000}
-            className=" h-full object-cover w-20 ml-6  object-top"
+            className=" h-full object-cover w-20   object-top"
           />
         </Link>
       </div>

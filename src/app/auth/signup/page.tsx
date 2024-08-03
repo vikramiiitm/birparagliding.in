@@ -3,6 +3,19 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Axios from "axios";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import HashLoader from "react-spinners/HashLoader";
+import Link from "next/link";
 
 export default function SignUpPage() {
   const [user, setUser] = useState({
@@ -35,7 +48,7 @@ export default function SignUpPage() {
       const response = await Axios.post("/api/user/signup", user);
       console.log("Signup Success", response.data);
       if (response.status === 201) {
-        router.push("/login");
+        router.push("/auth/login");
       }
     } catch (error: any) {
       console.log("Signup failed", error);
@@ -47,35 +60,89 @@ export default function SignUpPage() {
 
   return (
     <div>
-      <h1>{loading ? "Loading....." : "Signup"}</h1>
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-      <form onSubmit={onSignup}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          value={user.username}
-          onChange={(e) => setUser({ ...user, username: e.target.value })}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          value={user.email}
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={user.password}
-          autoComplete="current-password"
-          onChange={(e) => setUser({ ...user, password: e.target.value })}
-        />
-        <button type="submit" disabled={buttonDisabled}>
-          {buttonDisabled ? "No Signup" : "Signup"}
-        </button>
-      </form>
+      <div className="flex mx-auto flex-col justify-center items-center h-screen relative px-5">
+        <div className="relative">
+          <div className="absolute top-10 left-56">
+            {loading ? (
+              <p className="flex mx-auto h-screen justify-center items-center text-6xl">
+                <HashLoader
+                  color="#000"
+                  loading={loading}
+                  size={80}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              </p>
+            ) : (
+              ""
+            )}
+          </div>
+          {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          <Card className="w-full p3 flex mx-auto flex-col justify-center items-center ">
+            <CardHeader>
+              <CardTitle>Signup your Account</CardTitle>
+              <CardDescription>
+                {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+              </CardDescription>
+            </CardHeader>
+            <form onSubmit={onSignup}>
+              <CardContent>
+                <Input
+                  type="text"
+                  id="username"
+                  value={user.username}
+                  onChange={(e) =>
+                    setUser({ ...user, username: e.target.value })
+                  }
+                  placeholder="Username"
+                />
+              </CardContent>
+              <CardContent>
+                <Input
+                  placeholder="Email"
+                  type="email"
+                  id="email"
+                  value={user.email}
+                  onChange={(e) => setUser({ ...user, email: e.target.value })}
+                />
+              </CardContent>
+              <CardContent>
+                <Input
+                  placeholder="Password"
+                  type="password"
+                  id="password"
+                  value={user.password}
+                  autoComplete="current-password"
+                  onChange={(e) =>
+                    setUser({ ...user, password: e.target.value })
+                  }
+                />
+              </CardContent>
+              <CardContent>
+                <Button
+                  className="w-full"
+                  type="submit"
+                  disabled={buttonDisabled}
+                >
+                  {buttonDisabled ? "No Signup" : "Signup"}
+                </Button>
+              </CardContent>
+            </form>
+            <Separator />
+            <CardFooter className="mt-4 flex gap-3">
+              <p>Already have an account? </p>
+              <Link
+                className="text-blue-500 hover:text-gray-900 duration-500"
+                href="/auth/signup"
+              >
+                Login here.
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+      </div>
+
+     
     </div>
   );
 }
