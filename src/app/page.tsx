@@ -49,12 +49,12 @@ const testimonials = [
     review:
       "This was my first paragliding experience, and I was both nervous and excited. As soon as I started gliding through the winds, it felt like I was flying and time slowed down. A big thank you to Sky Candy for ensuring my safety throughout the entire journey.",
   },
- 
+
   {
     img: Vineet,
-    name: "Vineet",
-    review: `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+    name: "Apurva",
+    review: `Had an incredible experience with pilot Sunny! His exceptional handling skills and extensive experience truly made it an awesome adventure. Paragliding had always been a dream of mine, and finally taking the plunge with him was beyond words. The sensation of flying was surreal! Every aspect of the experience was simply outstanding.
+`,
   },
   {
     img: Vineet,
@@ -62,24 +62,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis q
     review: `
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
   },
-  {
-    img: Vineet,
-    name: "Vineet",
-    review: `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
-  },
-  {
-    img: Vineet,
-    name: "Vineet",
-    review: `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
-  },
-  {
-    img: Vineet,
-    name: "Vineet",
-    review: `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
-  },
+  
 ];
 
 
@@ -107,7 +90,7 @@ function Page() {
       <Navbar />
       <div>
         <section className="relative  w-full h-full  flex justify-between overflow-hidden items-center  flex-col-reverse lg:flex-row">
-          <div className=" px-10 pt-0 top-20 md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-3 md:gap-10">
+          <div className=" px-10 pt-0 top-[60px] md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-3 md:gap-10">
             <Fade direction="left" triggerOnce>
               <h1
                 className="text-2xl lg:text-5xl text-center font-bold text-white"
@@ -158,13 +141,13 @@ function Page() {
           />
           <div className="flex justify-center">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-center text-xl md:text-4xl  font-bold p-4 bg-[#faf9f7] border rounded-lg ">
+              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 bg-[#faf9f7] border rounded-lg ">
                 Fly Beyonds Limits With Sky Candy
               </h1>
             </Fade>
           </div>
         </section>
-        <section className="bg-yellow-500">
+        <section className="bg-[#e7de7b]">
           <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10  ">
             <div className="pt-6 md:pt-0 lg:w-[50%]">
               <Fade direction="left" triggerOnce>
@@ -285,7 +268,7 @@ function Page() {
           </div>
         </section>
 
-        <section className=" px-5 bg-yellow-500 py-4">
+        <section className=" px-5 bg-[#e7de7b] py-4">
           <div className="flex flex-col-reverse md:flex-row items-center justify-center md:max-w-7xl md:mx-auto">
             <Fade direction="left" triggerOnce>
               <div className="flex py-4 w-full lg:w-[70%] flex-col items-center ">
@@ -327,7 +310,7 @@ function Page() {
               opts={{
                 align: "start",
               }}
-              className=" max-w-sm  md:max-w-7xl mx-auto px-5 pl-8"
+              className=" max-w-sm  md:max-w-7xl mx-auto px-5 "
             >
               <CarouselContent>
                 {testimonials.map((props, index) => (
@@ -336,7 +319,7 @@ function Page() {
                     className="pl-1 md:basis-1/2 lg:basis-1/3"
                   >
                     <div className="">
-                      <Card className="h-full">
+                      <Card className="h-full bg-[#e7de7b]">
                         <CardContent className="flex flex-col aspect-square items-center justify-center  gap-4 md:gap-10 p-4">
                           <p className="text-sm md:text-base italic ">
                             {" "}
