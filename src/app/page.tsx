@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+
 // import TextScroller from "text-scroller";
 
 // import HeroImg from "../../public/SkyCandy/p.jpeg";
@@ -27,6 +28,71 @@ import Footer from "@/components/Footer";
 import WorldMap from "../../public/home/WorldMap.png";
 
 import { Fade } from "react-awesome-reveal";
+
+import Pattern from "../../public/pattern.jpg";
+import Vineet from "../../public/testimonialsImgs/vineet.jpg"
+
+
+
+
+
+
+
+
+
+
+
+const testimonials = [
+  {
+    img: Vineet,
+    name: "Vineet",
+    review:
+      "This was my first paragliding experience, and I was both nervous and excited. As soon as I started gliding through the winds, it felt like I was flying and time slowed down. A big thank you to Sky Candy for ensuring my safety throughout the entire journey.",
+  },
+ 
+  {
+    img: Vineet,
+    name: "Vineet",
+    review: `
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+  },
+  {
+    img: Vineet,
+    name: "Vineet",
+    review: `
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+  },
+  {
+    img: Vineet,
+    name: "Vineet",
+    review: `
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+  },
+  {
+    img: Vineet,
+    name: "Vineet",
+    review: `
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+  },
+  {
+    img: Vineet,
+    name: "Vineet",
+    review: `
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+  },
+];
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -50,6 +116,7 @@ function Page() {
                 See The World Like A Bird Glide With US
               </h1>
             </Fade>
+
             <Fade direction="right" triggerOnce>
               <Button
                 onClick={() => {
@@ -81,7 +148,14 @@ function Page() {
             <source src="../../video.mp4" type="video/mp4" />
           </video> */}
         </section>
-        <section className="py-10">
+        <section className="py-10 px-10 overflow-hidden relative">
+          <Image
+            src={Pattern}
+            width={1000}
+            height={1000}
+            alt="BirMaskImg"
+            className="w-full h-[40vh] lg:h-[60vh] object-cover left-0 object-center absolute top-0 -z-10 opacity-20"
+          />
           <div>
             <Fade direction="left" triggerOnce>
               <h1 className="text-center text-xl md:text-4xl  font-bold uppercase">
@@ -151,7 +225,7 @@ function Page() {
 
             <div className=" flex flex-col items-center justify-center z-20 ">
               <Fade direction="right" triggerOnce>
-                <h1 className="text-3xl md:text-5xl text-center font-bold  py-10 md:max-w-sm md:mx-auto">
+                <h1 className="text-3xl md:text-4xl text-center font-bold  py-10 md:max-w-md md:mx-auto uppercase">
                   Why You Should Choose Us
                 </h1>
               </Fade>
@@ -245,35 +319,39 @@ function Page() {
         </section>
 
         <section className="py-10 px-5 ">
-          <h1 className="text-3xl md:text-5xl text-center font-bold pb-10 italic">
+          <h1 className="text-3xl md:text-4xl text-center font-bold uppercase underline">
             Review
           </h1>
-          <div className="p-10 overflow-hidden">
+          <div className=" py-10 overflow-hidden">
             <Carousel
               opts={{
                 align: "start",
               }}
-              className=" max-w-xs  md:max-w-7xl mx-auto"
+              className=" max-w-sm  md:max-w-7xl mx-auto px-5 pl-8"
             >
               <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
+                {testimonials.map((props, index) => (
                   <CarouselItem
                     key={index}
-                    className="md:basis-[30%] lg:basis-1/3 drop-shadow-md"
+                    className="pl-1 md:basis-1/2 lg:basis-1/3"
                   >
-                    <div className="p-1">
-                      <Card>
-                        <CardContent className="flex flex-col aspect-video items-start justify-center p-6">
-                          <p>
-                            <em>
-                              <q>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Sed fuga illo dolor tempora
-                                quae debitis corrupti dolore aut quaerat animi.
-                              </q>
-                            </em>
+                    <div className="">
+                      <Card className="h-full">
+                        <CardContent className="flex flex-col aspect-square items-center justify-center  gap-4 md:gap-10 p-4">
+                          <p className="text-sm md:text-base italic ">
+                            {" "}
+                            <q>{props.review}</q>{" "}
                           </p>
-                          <p>Name</p>
+                          <div className="flex flex-col items-center justify-center ">
+                            <Image
+                              src={props.img}
+                              width={1000}
+                              height={1000}
+                              alt="BirMaskImg"
+                              className="w-20 h-20 rounded-full object-cover object-center"
+                            />
+                            <p className="text-md font-bold">{props.name}</p>
+                          </div>
                         </CardContent>
                       </Card>
                     </div>

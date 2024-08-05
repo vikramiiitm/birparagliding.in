@@ -52,8 +52,11 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="p-5 text-center border-t border-white max-w-4xl mx-auto">
+      <div className="p-5 text-center border-t border-white max-w-4xl mx-auto flex gap-8 itme-center justify-center">
         <p>copyright &copy; 2024 skycandy All Rights Reserved.</p>
+        <p>
+          Made by <a href="https://noblessetech.com/" className="font-bold">Noblessetech</a>
+        </p>
       </div>
     </footer>
   );
