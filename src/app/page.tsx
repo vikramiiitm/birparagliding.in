@@ -141,13 +141,13 @@ function Page() {
           />
           <div className="flex justify-center">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 bg-[#faf9f7] border rounded-lg ">
+              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-[#e7de7b] border rounded-lg ">
                 Fly Beyonds Limits With Sky Candy
               </h1>
             </Fade>
           </div>
         </section>
-        <section className="bg-[#e7de7b]">
+        <section className="bg-[#e7de7b] ">
           <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10  ">
             <div className="pt-6 md:pt-0 lg:w-[50%]">
               <Fade direction="left" triggerOnce>
