@@ -14,7 +14,7 @@ function pages() {
       <div className=" bg-[#eb]">
         <section>
           <div className=" h-[30vh] md:h-[60vh] relative flex   border    ">
-            <div className="flex flex-col md:gap-2  lg:pl-20  top-10 px-10 text-black items-start justify-center text-start w-full">
+            <div className="flex flex-col md:gap-2  lg:pl-20  top-10 px-5 text-black items-start justify-center text-start w-full">
               <h1 className="text-2xl lg:text-5xl font-bold">
                 Sky Candy School Of Paragliding
               </h1>
@@ -27,7 +27,7 @@ function pages() {
               <a
                 href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
-                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  md:mt-8"
+                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  md:mt-6 mt-4"
                 rel="noopener noreferrer"
               >
                 <Image
