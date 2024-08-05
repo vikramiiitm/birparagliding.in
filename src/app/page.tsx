@@ -122,7 +122,7 @@ function Page() {
                 onClick={() => {
                   router.push("/tour");
                 }}
-                className="flex w-full lg:w-96 bg-blue-500 hover:bg-blue-600 "
+                className="flex w-full h-8 md:h-full lg:w-96 bg-blue-500 hover:bg-blue-600 "
               >
                 book your Quote
               </Button>
@@ -148,7 +148,7 @@ function Page() {
             <source src="../../video.mp4" type="video/mp4" />
           </video> */}
         </section>
-        <section className="py-10 px-10 overflow-hidden relative">
+        <section className="py-5 md:py-7 px-10 overflow-hidden relative">
           <Image
             src={Pattern}
             width={1000}
