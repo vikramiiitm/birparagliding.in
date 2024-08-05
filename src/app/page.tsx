@@ -156,9 +156,9 @@ function Page() {
             alt="BirMaskImg"
             className="w-full h-[40vh] lg:h-[60vh] object-cover left-0 object-center absolute top-0 -z-10 opacity-20"
           />
-          <div>
+          <div className="flex justify-center">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-center text-xl md:text-4xl  font-bold uppercase">
+              <h1 className="text-center text-xl md:text-4xl  font-bold p-4 bg-[#faf9f7] border rounded-lg ">
                 Fly Beyonds Limits With Sky Candy
               </h1>
             </Fade>
@@ -205,7 +205,7 @@ function Page() {
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-[100vw] lg:w-[40vw]  rounded h-[50vh] lg:h-[45vh]  object-cover object-bottom"
+                className="w-[100vw] lg:w-[40vw]  rounded h-[50vh] lg:h-[45vh]  object-cover object-center"
               />
             </Fade>
           </div>
