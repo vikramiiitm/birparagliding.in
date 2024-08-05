@@ -27,7 +27,7 @@ function pages() {
               <a
                 href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
-                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  md:mt-6"
+                className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  md:mt-8"
                 rel="noopener noreferrer"
               >
                 <Image
@@ -35,7 +35,7 @@ function pages() {
                   width={30}
                   height={30}
                   alt="whatsapp icon"
-                  className="p-2 md:w-10 rounded-l bg-white"
+                  className="p-2 md:w-10 rounded-lg bg-white"
                 />
                 <span>Chat with us</span>
               </a>
