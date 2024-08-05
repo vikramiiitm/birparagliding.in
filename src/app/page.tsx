@@ -31,6 +31,7 @@ import { Fade } from "react-awesome-reveal";
 
 import Pattern from "../../public/pattern.jpg";
 import Vineet from "../../public/testimonialsImgs/vineet.jpg"
+import Apurva from "../../public/testimonialsImgs/Apurva.jpg";
 
 
 
@@ -51,7 +52,7 @@ const testimonials = [
   },
 
   {
-    img: Vineet,
+    img: Apurva,
     name: "Apurva",
     review: `Had an incredible experience with pilot Sunny! His exceptional handling skills and extensive experience truly made it an awesome adventure. Paragliding had always been a dream of mine, and finally taking the plunge with him was beyond words. The sensation of flying was surreal! Every aspect of the experience was simply outstanding.
 `,
@@ -62,7 +63,6 @@ const testimonials = [
     review: `
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
   },
-  
 ];
 
 
@@ -308,7 +308,7 @@ function Page() {
           <div className=" py-10 overflow-hidden">
             <Carousel
               opts={{
-                align: "start",
+                align: "center",
               }}
               className=" max-w-sm  md:max-w-7xl mx-auto px-5 "
             >
