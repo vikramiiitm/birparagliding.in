@@ -25,7 +25,7 @@ function pages() {
                 Duration :- 10 Days
               </p>
               <a
-                href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
+                href="https://wa.me/+919736333133?text=I'm%20interested%20in%20Paragliding%20course%20from%20you"
                 target="_blank"
                 className="flex items-center gap-4 text-lg font-bold text-white justify-center hover:bg-green-500 bg-green-500 duration-500 md:max-w-fit border pr-4 rounded-lg  md:mt-6 mt-4"
                 rel="noopener noreferrer"

@@ -24,7 +24,7 @@ import {
 interface ContactFormData {
   name: string;
   email: string;
-  phoneNumber: number;
+  phoneNumber: string;
   message: string;
 }
 
@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
-    phoneNumber: 9999999999,
+    phoneNumber: "",
     message: "",
   });
   const [error, setError] = useState<string | null>(null);
@@ -65,7 +65,7 @@ const ContactPage: React.FC = () => {
       }
 
       setSuccess("Your message has been sent successfully!");
-      setFormData({ name: "", email: "", phoneNumber: 0, message: "" }); // Clear form
+      setFormData({ name: "", email: "", phoneNumber: "", message: "" }); // Clear form
     } catch (error: any) {
       setError(error.message || "An error occurred");
     }
@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   required
-                  placeholder="Phone Number"
+                  placeholder="Phone Number with country code"
                 />
               </CardContent>
               <CardContent>

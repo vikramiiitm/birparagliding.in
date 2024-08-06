@@ -32,6 +32,7 @@ import { Fade } from "react-awesome-reveal";
 import Pattern from "../../public/pattern.jpg";
 import Vineet from "../../public/testimonialsImgs/vineet.jpg"
 import Apurva from "../../public/testimonialsImgs/Apurva.jpg";
+import Vikram from "../../public/testimonialsImgs/Vikram.jpg";
 
 
 
@@ -58,10 +59,9 @@ const testimonials = [
 `,
   },
   {
-    img: Vineet,
-    name: "Vineet",
-    review: `
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum reiciendis quis ea tenetur, quasi ad corporis, assumenda culpa voluptatem error nemo labore ipsa autem numquam iusto dolore harum, aspernatur quae a impedit aliquam minus. Iste ipsam inventore magnam facere?`,
+    img: Vikram,
+    name: "Vikram",
+    review: `Best flying experience. gliders were helpful and made sure we have the best time flying. Sky Candy is the best in bir.`,
   },
 ];
 
@@ -142,7 +142,7 @@ function Page() {
           <div className="flex justify-center">
             <Fade direction="left" triggerOnce>
               <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-[#e7de7b] border rounded-lg ">
-                Fly Beyonds Limits With Sky Candy
+                Fly Beyond Limits With Sky Candy
               </h1>
             </Fade>
           </div>

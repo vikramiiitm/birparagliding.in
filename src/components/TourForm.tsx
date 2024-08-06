@@ -303,6 +303,7 @@ const verifyCoupon = async () => {
               required
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(Number(e.target.value))}
+              placeholder="+91 1234567890"
             />
           </div>
           <div className="space-y-1">
@@ -353,7 +354,7 @@ const verifyCoupon = async () => {
           View Receipt
         </Link>
         <a
-          href="https://wa.me/+91973633133?text=I'm%20interested%20in%20Paragliding%20Flying%20Tour."
+          href="https://wa.me/+919736333133?text=I'm%20interested%20in%20Paragliding%20Flying%20Tour."
           className="px-6 w-full text-center hover:bg-green-600 p-2 bg-green-500 text-white rounded"
         >
           Contact us on Whatsapp

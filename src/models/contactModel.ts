@@ -4,7 +4,7 @@ import mongoose, { Schema, Document } from "mongoose";
 interface IContact extends Document {
   name: string;
   email: string;
-  phoneNumber: number;
+  phoneNumber: string;
   message: string;
   contacted?: boolean; // Optional field for tracking contact status
 }
@@ -19,7 +19,7 @@ const ContactSchema: Schema<IContact> = new Schema({
     required: true,
   },
   phoneNumber: {
-    type: Number,
+    type: String,
     required: true,
   },
   message: {
