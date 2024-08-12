@@ -60,30 +60,28 @@ export default function SignUpPage() {
 
   return (
     <div>
-      <div className="flex mx-auto flex-col justify-center items-center h-screen relative px-5">
-        <div className="relative">
-          <div className="absolute top-10 left-56">
-            {loading ? (
-              <p className="flex mx-auto h-screen justify-center items-center text-6xl">
-                <HashLoader
-                  color="#000"
-                  loading={loading}
-                  size={80}
-                  aria-label="Loading Spinner"
-                  data-testid="loader"
-                />
-              </p>
-            ) : (
-              ""
-            )}
-          </div>
+      <div className="flex mx-auto flex-col justify-center items-center  h-screen relative px-5">
+        <div className="absolute -top-32 left-32">
+          {loading ? (
+            <p className="flex mx-auto h-screen w-full justify-center items-center text-6xl">
+              <HashLoader
+                color="#000"
+                loading={loading}
+                size={80}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            </p>
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="relative  ">
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           <Card className="w-full p3 flex mx-auto flex-col justify-center items-center ">
             <CardHeader>
               <CardTitle>Signup your Account</CardTitle>
-              <CardDescription>
-                {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-              </CardDescription>
+              <CardDescription></CardDescription>
             </CardHeader>
             <form onSubmit={onSignup}>
               <CardContent>
@@ -141,8 +139,6 @@ export default function SignUpPage() {
           </Card>
         </div>
       </div>
-
-     
     </div>
   );
 }

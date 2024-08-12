@@ -134,13 +134,13 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if any user already exists in the database
-    // const existingUser = await User.countDocuments();
-    // if (existingUser >= 2) {
-    //   return NextResponse.json(
-    //     { message: "User already exists. Only two users are allowed." },
-    //     { status: 400 }
-    //   );
-    // }
+    const existingUser = await User.countDocuments();
+    if (existingUser >= 2) {
+      return NextResponse.json(
+        { message: "you are not allowed to signup. Only two users are allowed." },
+        { status: 400 }
+      );
+    }
 
     // Hash password
     const salt = await bcryptjs.genSalt(10);
