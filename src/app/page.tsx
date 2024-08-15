@@ -33,9 +33,10 @@ import Pattern from "../../public/pattern.jpg";
 import Vineet from "../../public/testimonialsImgs/vineet.jpg"
 import Apurva from "../../public/testimonialsImgs/Apurva.jpg";
 import Vikram from "../../public/testimonialsImgs/Vikram.jpg";
+import { useState } from "react";
 
 
-
+import EmblaCarousel from '@/components/Carousel/Carousel';
 
 
 
@@ -63,6 +64,25 @@ const testimonials = [
     name: "Vikram",
     review: `Best flying experience. gliders were helpful and made sure we have the best time flying. Sky Candy is the best in bir.`,
   },
+  
+  {
+    img: Vikram,
+    name: "Vikram",
+    review: `Best flying experience. gliders were helpful and made sure we have the best time flying. Sky Candy is the best in bir.`,
+  },
+  
+  {
+    img: Vikram,
+    name: "Vikram",
+    review: `Best flying experience. gliders were helpful and made sure we have the best time flying. Sky Candy is the best in bir.`,
+  },
+  
+  {
+    img: Vikram,
+    name: "Vikram",
+    review: `Best flying experience. gliders were helpful and made sure we have the best time flying. Sky Candy is the best in bir.`,
+  },
+  
 ];
 
 
@@ -81,7 +101,7 @@ const testimonials = [
 
 
 function Page() {
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
   const router = useRouter();
 
 
@@ -93,7 +113,7 @@ function Page() {
           <div className=" px-10 pt-0 top-[60px] md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-3 md:gap-10">
             <Fade direction="left" triggerOnce>
               <h1
-                className="text-2xl lg:text-5xl text-center font-bold text-white"
+                className="text-2xl lg:text-5xl text-center font-bold text-white uppercase"
                 style={{ textShadow: "4px 4px 10px black" }}
               >
                 See The World Like A Bird Glide With US
@@ -105,7 +125,7 @@ function Page() {
                 onClick={() => {
                   router.push("/tour");
                 }}
-                className="flex w-full h-8 md:h-full lg:w-96 bg-blue-500 hover:bg-blue-600 "
+                className="flex w-full h-8 md:h-full lg:w-96 bg-blue-800 hover:bg-blue-600 uppercase"
               >
                 book your Quote
               </Button>
@@ -113,7 +133,7 @@ function Page() {
           </div>
 
           <video
-            src="../../video.mp4"
+            src="../../HeroSection.mp4"
             autoPlay
             loop
             muted
@@ -141,23 +161,23 @@ function Page() {
           />
           <div className="flex justify-center">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-[#e7de7b] border rounded-lg ">
+              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-gradient-to-tr from-[#F1C76B] to-[#DFA018] border rounded-lg uppercase">
                 Fly Beyond Limits With Sky Candy
               </h1>
             </Fade>
           </div>
         </section>
-        <section className="bg-[#e7de7b] ">
-          <div className=" max-w-7xl mx-auto flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center px-5 py-10  ">
-            <div className="pt-6 md:pt-0 lg:w-[50%]">
+        <section className="bg-[#E8AF30] ">
+          <div className="  flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center  ">
+            <div className="pt-6 md:pt-0 lg:w-[50%] px-5 py-10 flex flex-col justify-center md:mx-auto">
               <Fade direction="left" triggerOnce>
-                <h1 className="text-3xl md:text-4xl font-bold text-slate-950">
+                <h1 className="text-3xl md:text-4xl font-bold text-slate-950 uppercase">
                   {" "}
                   Bir Billing Paragliding{" "}
                 </h1>
               </Fade>
               <Fade direction="left" triggerOnce>
-                <p className="py-4 text-sm md:text-base text-gray-800">
+                <p className="py-4 text-sm md:text-base text-gray-800 ">
                   Welcome to Bir Billing, the paragliding capital of India and a
                   haven for adventure enthusiasts from around the globe! Nestled
                   in the scenic Dhauladhar Range of the Himalayas, Bir Billing
@@ -176,7 +196,7 @@ function Page() {
                   onClick={() => {
                     router.push("/tour");
                   }}
-                  className="flex  w-full text-white font-semibold  bg-blue-800 hover:bg-blue-600 "
+                  className="flex  w-full text-white font-semibold  bg-blue-800 hover:bg-blue-600 uppercase"
                 >
                   book your Quote
                 </Button>
@@ -188,7 +208,7 @@ function Page() {
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-[100vw] lg:w-[40vw]  rounded h-[50vh] lg:h-[45vh]  object-cover object-center"
+                className="w-[100vw] lg:w-[45vw]   h-[50vh] lg:h-[60vh]  object-cover object-center"
               />
             </Fade>
           </div>
@@ -214,7 +234,7 @@ function Page() {
               </Fade>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:pt-10 text-xs text-center lg:text-lg ">
                 <Fade direction="up" triggerOnce>
-                  <div className="flex flex-col border bg-[#e7de7b] h-32 lg:h-56 w-32 lg:w-56 drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border bg-gradient-to-bl from-[#F1C76B] to-[#DFA018] h-32 lg:h-56 w-32 lg:w-56 drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Pilot}
                       width={1000}
@@ -227,7 +247,7 @@ function Page() {
                 </Fade>
 
                 <Fade direction="left" triggerOnce>
-                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-[#e7de7b] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-gradient-to-bl from-[#F1C76B] to-[#DFA018] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Equipments}
                       width={1000}
@@ -240,7 +260,7 @@ function Page() {
                 </Fade>
 
                 <Fade direction="down" triggerOnce>
-                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-[#e7de7b] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border lg:h-56 h-32 w-32 lg:w-56 bg-gradient-to-bl from-[#F1C76B] to-[#DFA018] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Price}
                       width={1000}
@@ -252,7 +272,7 @@ function Page() {
                   </div>
                 </Fade>
                 <Fade direction="right" triggerOnce>
-                  <div className="flex flex-col border lg:h-56 lg:w-56 h-32 w-32 bg-[#e7de7b] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
+                  <div className="flex flex-col border lg:h-56 lg:w-56 h-32 w-32 bg-gradient-to-bl from-[#F1C76B] to-[#DFA018] drop-shadow-lg shadow-lg  items-center justify-center p-2 rounded-lg">
                     <Image
                       src={Staff}
                       width={1000}
@@ -268,18 +288,18 @@ function Page() {
           </div>
         </section>
 
-        <section className=" px-5 bg-[#e7de7b] py-4">
-          <div className="flex flex-col-reverse md:flex-row items-center justify-center md:max-w-7xl md:mx-auto">
+        <section className="  bg-[#E8AF30] ">
+          <div className="flex flex-col-reverse md:flex-row items-center justify-center ">
             <Fade direction="left" triggerOnce>
-              <div className="flex py-4 w-full lg:w-[70%] flex-col items-center ">
-                <h1 className="text-2xl md:text-6xl text-center font-bold  md:pt-0">
+              <div className="flex  w-full lg:w-[80%] flex-col items-center lg:mx-auto py-10">
+                <h1 className="text-2xl md:text-6xl text-center font-bold uppercase  md:pt-0">
                   Enroll in Sky Candy School of Paragliding Courses!
                 </h1>
                 <Button
                   onClick={() => {
                     router.push("/course");
                   }}
-                  className="flex mt-4 w-56 text-sm md:text-base lg:w-96 bg-blue-900 hover:bg-green-600 "
+                  className="flex mt-4 w-56 text-sm md:text-base lg:w-96 bg-blue-900 hover:bg-blue-600 uppercase"
                 >
                   book your Quote
                 </Button>
@@ -294,7 +314,7 @@ function Page() {
                   width={1000}
                   height={1000}
                   alt="BirMaskImg"
-                  className="w-full rounded-lg md:w-full h-[40vh] lg:h-[60vh] object-cover object-center "
+                  className="w-full md:w-[80vw]  h-full object-cover object-center"
                 />
               </div>
             </Fade>
@@ -310,7 +330,9 @@ function Page() {
               opts={{
                 align: "center",
               }}
-              className=" max-w-sm  md:max-w-7xl mx-auto px-5 "
+              className=" max-w-sm  md:max-w-[90rem] mx-auto  "
+             
+             
             >
               <CarouselContent>
                 {testimonials.map((props, index) => (
@@ -319,22 +341,23 @@ function Page() {
                     className="pl-1 md:basis-1/2 lg:basis-1/3"
                   >
                     <div className="">
-                      <Card className="h-full bg-[#e7de7b]">
-                        <CardContent className="flex flex-col aspect-square items-center justify-center  gap-4 md:gap-10 p-4">
-                          <p className="text-sm md:text-base italic ">
-                            {" "}
-                            <q>{props.review}</q>{" "}
-                          </p>
+                      <Card className="h-[60vh] md:w-[25vw] flex justify-center items-center  bg-gradient-to-t from-[#E8AF30] to-[#ebc245] rounded hover:scale-110 duration-500">
+                        <CardContent className="flex flex-col  items-center justify-center  gap-4 p-4">
+                         
                           <div className="flex flex-col items-center justify-center ">
                             <Image
                               src={props.img}
                               width={1000}
                               height={1000}
                               alt="BirMaskImg"
-                              className="w-20 h-20 rounded-full object-cover object-center"
+                              className="w-32 h-32 rounded-full object-cover object-center"
                             />
                             <p className="text-md font-bold">{props.name}</p>
                           </div>
+                          <p className="text-base font-medium italic ">
+                            {" "}
+                            <q>{props.review}</q>{" "}
+                          </p>
                         </CardContent>
                       </Card>
                     </div>
@@ -345,7 +368,12 @@ function Page() {
               <CarouselNext />
             </Carousel>
           </div>
+        
+          {/* <div className="hidden md:block">
+            <EmblaCarousel />
+          </div> */}
         </section>
+
       </div>
       <Footer />
     </>

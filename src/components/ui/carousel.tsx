@@ -161,8 +161,8 @@ const CarouselContent = React.forwardRef<
       <div
         ref={ref}
         className={cn(
-          "flex",
-          orientation === "horizontal" ? "-ml-0" : "-mt-4 flex-col",
+          "flex h-[70vh]  items-center",
+          orientation === "horizontal" ? "-ml-0 " : "-mt-4 m-4 flex-col",
           className
         )}
         {...props}
@@ -185,7 +185,8 @@ const CarouselItem = React.forwardRef<
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        orientation === "horizontal" ? "pl-4 " : "pt-4",
+        
         className
       )}
       {...props}
@@ -199,6 +200,8 @@ const CarouselPrevious = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+
+  
 
   return (
     <Button
@@ -260,3 +263,5 @@ export {
   CarouselPrevious,
   CarouselNext,
 }
+
+
