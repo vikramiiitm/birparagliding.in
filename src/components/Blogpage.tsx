@@ -42,7 +42,7 @@ const BlogPage: React.FC = () => {
       setBlogPosts(sortedPosts);
     } catch (error) {
       console.error("Error fetching blog posts:", error);
-      setError("Failed to fetch blog posts. Please try again later.");
+      // setError("Failed to fetch blog posts. Please try again later.");
     } finally {
       setLoading(false);
     }

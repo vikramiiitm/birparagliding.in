@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import paraTrans from "../../../public/paraTrans.png";
+import paraTrans from "../../../public/SkyCandy/About.webp";
+// import paraTrans from "../../../public/paraTrans.png";
 import TCp1 from "../../../public/SkyCandy/TCP1.webp";
 import TCp2 from "../../../public/SkyCandy/TCP2.webp";
 import TCp3 from "../../../public/SkyCandy/g9.webp";
@@ -11,10 +12,10 @@ function pages() {
   return (
     <>
       <Navbar />
-      <div className=" bg-[#eb]">
+      <div className=" ">
         <section>
-          <div className=" h-[30vh] md:h-[60vh] relative flex   border    ">
-            <div className="flex flex-col md:gap-2  lg:pl-20  top-10 px-5 text-black items-start justify-center text-start w-full">
+          <div className=" h-[30vh] md:h-[60vh] relative flex       ">
+            <div className="flex flex-col md:gap-2  lg:pl-20  top-10 px-5 text-white items-start justify-center text-start w-full">
               <h1 className="text-2xl lg:text-5xl font-bold">
                 Sky Candy School Of Paragliding
               </h1>
@@ -40,15 +41,22 @@ function pages() {
                 <span>Chat with us</span>
               </a>
             </div>
-            {/* <div className="absolute bg-black opacity-[.4] top-0 -z-10 w-full h-[70vh] object-cover object-top lg:object-center"></div> */}
+            <div className="absolute bg-black opacity-[.5]  w-full  top-0 left-0  h-[30vh] md:h-[60vh] -z-10 object-cover"></div>
             <Image
               src={paraTrans}
               width={1000}
               height={1000}
               alt="courses"
-              className="w-[40vw] md:w-[30vw] h-[25vh] md:h-[50vh] absolute top-10 -right-1 md:right-20 rounded-lg object-conatin    "
+              className="w-full absolute top-0 left-0  h-[30vh] md:h-[60vh] -z-20 object-cover "
             />
-            <div className="w-full absolute  bottom-0 -z-10  rounded-lg object-cover object-center   ">
+            {/* <Image
+              src={paraTrans}
+              width={1000}
+              height={1000}
+              alt="courses"
+              className="w-[40vw] md:w-[30vw] h-[25vh] md:h-[50vh] absolute top-10 -right-1 md:right-20 rounded-lg object-conatin    "
+            /> */}
+            {/* <div className="w-full absolute  bottom-0 -z-10  rounded-lg object-cover object-center   ">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path
                   fill="#0099ff"
@@ -56,10 +64,10 @@ function pages() {
                   d="M0,160L34.3,144C68.6,128,137,96,206,80C274.3,64,343,64,411,90.7C480,117,549,171,617,165.3C685.7,160,754,96,823,106.7C891.4,117,960,203,1029,218.7C1097.1,235,1166,181,1234,160C1302.9,139,1371,149,1406,154.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
                 ></path>
               </svg>
-            </div>
+            </div> */}
           </div>
         </section>
-        <section className=" p-4 bg-[#e7de7b] ">
+        <section className=" p-4 bg-[#E8AF30] text-black">
           <h2 className="text-3xl mt-1 font-bold text-start">Course Details</h2>
 
           <div className="py-10 relative">
@@ -90,7 +98,7 @@ function pages() {
             </div>
           </div>
 
-          <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center bg-[#e7de7b]">
+          <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 max-w-7xl mx-auto items-center ">
             <div className="">
               {" "}
               <h3 className="text-xl font-bold">Days 1-3 :- Ground Handling</h3>

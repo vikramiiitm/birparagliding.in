@@ -19,6 +19,7 @@ import {
 // import HeroImg from "../../public/SkyCandy/p.jpeg";
 import BirMaskImg from "../../public/SkyCandy/g9.webp";
 import HomepageSection4 from "../../public/SkyCandy/courseImg.jpeg";
+import Sec2 from "../../public/SkyCandy/Sec2.jpg";
 import Pilot from "../../public/ParaIcon.png";
 import Equipments from "../../public/home/paraG.png";
 import Price from "../../public/home/rupee.png";
@@ -36,7 +37,7 @@ import Vikram from "../../public/testimonialsImgs/Vikram.jpg";
 import { useState } from "react";
 
 
-import EmblaCarousel from '@/components/Carousel/Carousel';
+// import EmblaCarousel from '@/components/Carousel/Carousel';
 
 
 
@@ -101,7 +102,7 @@ const testimonials = [
 
 
 function Page() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const router = useRouter();
 
 
@@ -151,17 +152,24 @@ function Page() {
             <source src="../../video.mp4" type="video/mp4" />
           </video> */}
         </section>
-        <section className="py-5 md:py-7 px-10 overflow-hidden relative">
+        <section className="h-[80vh]  relative">
           <Image
+            src={Sec2}
+            width={1000}
+            height={1000}
+            alt="BirMaskImg"
+            className="w-full h-[80vh] object-cover left-0 object-center   absolute "
+          />
+          {/* <Image
             src={Pattern}
             width={1000}
             height={1000}
             alt="BirMaskImg"
             className="w-full h-[40vh] lg:h-[60vh] object-cover left-0 object-center absolute top-0 -z-10 opacity-20"
-          />
-          <div className="flex justify-center">
+          /> */}
+          <div className="flex h-full pb-10 justify-center items-end">
             <Fade direction="left" triggerOnce>
-              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-gradient-to-tr from-[#F1C76B] to-[#DFA018] border rounded-lg uppercase">
+              <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-gradient-to-tr from-[#F1C76B] to-[#DFA018] border rounded-[30px]  uppercase">
                 Fly Beyond Limits With Sky Candy
               </h1>
             </Fade>
