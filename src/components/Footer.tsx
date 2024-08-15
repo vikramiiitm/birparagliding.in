@@ -52,11 +52,18 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="p-5 text-center border-t border-white max-w-4xl mx-auto flex gap-8 itme-center justify-center">
+      <div className="p-5 text-center border-t border-white max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center justify-between">
+        <div className=" flex flex-col gap-2">
         <p>copyright &copy; 2024 skycandy All Rights Reserved.</p>
-        <p>
-          Made by <a href="https://noblessetech.com/" className="font-bold">Noblessetech</a>
-        </p>
+          <div className="flex gap-2 justify-center">
+            <Link className="text-xs" href="/terms-condition">Terms & Conditions</Link>
+            <Link className="text-xs" href="/privacyPolicy">Privacy Policy</Link>
+            <Link className="text-xs" href="/Refund">Refund Policy</Link>
+          </div>
+        </div>
+          <p className="text-base">
+            Made by <a href="https://noblessetech.com/" className="font-bold">Noblessetech</a>
+          </p>
       </div>
     </footer>
   );
