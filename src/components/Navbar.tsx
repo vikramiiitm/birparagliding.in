@@ -61,6 +61,14 @@ function Navbar() {
           </MenubarMenu>
           <MenubarMenu>
             <Link
+              href="/blog"
+              className="hover:text-yellow-500 duration-500"
+            >
+              Blog
+            </Link>
+          </MenubarMenu>
+          <MenubarMenu>
+            <Link
               href="/gallery"
               className="hover:text-yellow-500 duration-500"
             >
@@ -111,6 +119,12 @@ function Navbar() {
                   className="hover:text-yellow-500 duration-500"
                 >
                   About
+                </Link>
+                <Link
+                  href="/blog"
+                  className="hover:text-yellow-500 duration-500"
+                >
+                  Blog
                 </Link>
                 <Link
                   href="/gallery"

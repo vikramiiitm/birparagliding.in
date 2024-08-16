@@ -75,7 +75,7 @@ const ContactPage: React.FC = () => {
     <div className="">
       <Navbar />
       <section className="relative">
-        <div className="w-full h-[40vh] bg-[#3361AC] flex justify-center items-center">
+        <div className="w-full h-[40vh] bg-[#091739] flex justify-center items-center">
           <h1 className="text-4xl md:text-6xl text-white font-bold">Contact Us</h1>
         </div>
 
@@ -122,7 +122,7 @@ const ContactPage: React.FC = () => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6  ">
             <Card>
               <CardHeader>
-                  <CardTitle className="text-[#3361AC]">Get In Touch With Us</CardTitle>
+                  <CardTitle className="text-[#E8AF30]">Get In Touch With Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <Input
@@ -170,7 +170,7 @@ const ContactPage: React.FC = () => {
               </CardContent>
 
               <CardContent>
-                  <Button type="submit" className="bg-[#3361AC]">Send Message</Button>
+                  <Button type="submit" className="bg-[#E8AF30] text-black font-bold">Send Message</Button>
               </CardContent>
             </Card>
 

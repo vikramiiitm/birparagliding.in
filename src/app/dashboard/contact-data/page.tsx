@@ -11,6 +11,7 @@ interface Contact {
   phoneNumber: number;
   message: string;
   contacted?: boolean;
+  createdAt: string;
 }
 
 const ContactsPage: React.FC = () => {
@@ -84,6 +85,9 @@ const ContactsPage: React.FC = () => {
               </div>
               <div>
                 <strong>Message:</strong> {contact.message}
+              </div>
+              <div>
+                <strong>Date:</strong> {new Date(contact.createdAt).toLocaleString()}
               </div>
             </div>
             <div className="">

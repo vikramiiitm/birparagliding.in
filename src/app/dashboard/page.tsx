@@ -27,12 +27,18 @@ ChartJS.register(
 interface Booking {
   _id: string;
   name: string;
-  package: string;
-  amount: number;
-  number: number;
   email: string;
+  amount: number;
+  currency: string;
   orderId: string;
-  date: string;
+  timeSlot: string;
+  phoneNumber: number;
+  participants: number;
+  code: string; // Optional couponCode field
+  flypackage: string;
+ 
+  date: Date;
+  flyDate: Date; // Added flyDate field
 }
 
 interface Contact {
@@ -41,7 +47,7 @@ interface Contact {
   email: string;
   message: string;
   phoneNumber: string;
-  date: string;
+  createdAt: string;
 }
 
 const Dashboard = () => {
@@ -242,13 +248,13 @@ const Dashboard = () => {
                       {booking.name}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {booking.package}
+                      {booking.flypackage}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.amount}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {booking.number}
+                      {booking.phoneNumber}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.email}
@@ -257,7 +263,12 @@ const Dashboard = () => {
                       {booking.orderId}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {new Date(booking.date).toLocaleString()}
+                    {/* {booking.flyDate.toLocaleString()} */}
+                    {new Date(booking.flyDate).toLocaleDateString('en-IN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      })}
                     </td>
                   </tr>
                 ))}
@@ -308,7 +319,7 @@ const Dashboard = () => {
                       {contact.phoneNumber}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {new Date(contact.date).toLocaleString()}
+                      {new Date(contact.createdAt).toLocaleString()}
                     </td>
                   </tr>
                 ))}

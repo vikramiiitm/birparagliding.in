@@ -357,7 +357,7 @@ const UpdateBlogPage: React.FC = () => {
   return (
     <div className="p-5">
       <Link
-        href="/dashboard/blogDashboard"
+        href="/dashboard/blog-dashboard"
         className=" px-6 hover:bg-gray-900 p-2 bg-black text-white rounded"
       >
         Back

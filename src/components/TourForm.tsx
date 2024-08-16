@@ -21,7 +21,7 @@ import axios from "axios";
 const TourForm = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [amount, setAmount] = useState<number>(2499); // default value
+  const [amount, setAmount] = useState<number>(0); // default value
   const [currency, setCurrency] = useState<string>("INR");
   const [timeSlot, setTimeSlot] = useState<string>("Sun Rise");
   const [phoneNumber, setPhoneNumber] = useState<number>();
@@ -29,7 +29,7 @@ const TourForm = () => {
   const [paymentId, setPaymentId] = useState<string | undefined>(undefined);
   const [flyDate, setFlyDate] = useState<string>("");
   const [totalAmount, setTotalAmount] = useState<number>(2499);
-  const [flypackage, setFlypackage] = useState<string>("Standard");
+  const [flypackage, setFlypackage] = useState<string>("Classic");
   const [code, setCode] = useState<string>("FLYCODE199");
   const [discount, setDiscount] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
@@ -236,16 +236,17 @@ const verifyCoupon = async () => {
           onSubmit={processPayment}
         >
           <div className="space-y-1">
-            <Label>Full name</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Full name</Label>
             <Input
               type="text"
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
+              placeholder="Full Name"
             />
           </div>
           <div className="space-y-1">
-            <Label>Email</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Email</Label>
             <Input
               type="email"
               placeholder="user@gmail.com"
@@ -255,7 +256,7 @@ const verifyCoupon = async () => {
             />
           </div>
           <div className="space-y-1">
-            <Label>Package</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Package</Label>
             <Select
               onValueChange={(value) => {
                 setFlypackage(value);
@@ -267,7 +268,7 @@ const verifyCoupon = async () => {
               }}
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select package" />
+                <SelectValue placeholder="Select package"   />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Classic">Classic</SelectItem>
@@ -277,13 +278,13 @@ const verifyCoupon = async () => {
           </div>
           {/* info tab for duration */}
 
-          <div>
+          <div className="text-[#3361AC] text-lg font-bold">
             <p>Classic : 20-25 min</p>
             <p>Premium : 40-45 min</p>
           </div>
 
           <div className="space-y-1">
-            <Label>Time Slot</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Time Slot</Label>
             <Select onValueChange={(value) => setTimeSlot(value)}>
               <SelectTrigger>
                 <SelectValue placeholder="Select time slot" />
@@ -297,7 +298,7 @@ const verifyCoupon = async () => {
           </div>
 
           <div className="space-y-1">
-            <Label>Phone Number</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Phone Number</Label>
             <Input
               type="text"
               required
@@ -307,7 +308,7 @@ const verifyCoupon = async () => {
             />
           </div>
           <div className="space-y-1">
-            <Label>Participants</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Participants</Label>
             <Input
               type="number"
               min={1}
@@ -318,7 +319,7 @@ const verifyCoupon = async () => {
           </div>
 
           <div className="space-y-1">
-            <Label>Fly Date</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Fly Date</Label>
             <Input
               type="date"
               required
@@ -327,7 +328,7 @@ const verifyCoupon = async () => {
             />
           </div>
           <div className="space-y-1">
-            <Label>Coupon Code</Label>
+            <Label className="text-[#E8AF30] text-lg font-bold">Coupon Code</Label>
             <Input
               type="text"
               value={code}
@@ -337,19 +338,19 @@ const verifyCoupon = async () => {
             <Button
               type="button"
               onClick={verifyCoupon}
-              className="bg-primary mt-2"
+              className="bg-[#3361AC] hover:bg-[#E8AF30] hover:text-black mt-4"
             >
               Apply Coupon
             </Button>
           </div>
-          <Button type="submit" className="bg-primary">
+          <Button type="submit" className="bg-[#3361AC] hover:bg-[#E8AF30] hover:text-black ">
             Pay {totalAmount.toLocaleString()} {currency}
           </Button>
         </form>
 
         <Link
           href="/reciept"
-          className="px-6 w-full text-center hover:bg-gray-900 p-2 bg-black text-white rounded"
+          className="px-6 w-full text-center  p-2 bg-[#3361AC] hover:bg-[#E8AF30] hover:text-black duration-500 text-white rounded"
         >
           View Receipt
         </Link>

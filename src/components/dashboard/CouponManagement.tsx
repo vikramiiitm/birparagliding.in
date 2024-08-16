@@ -33,8 +33,7 @@ const CouponManagement = () => {
   const [formData, setFormData] = useState({
     code: "",
     discountAmount: "",
-    duration: "",
-    isActive: true,
+   
   });
 
   useEffect(() => {
@@ -76,8 +75,7 @@ const CouponManagement = () => {
       setFormData({
         code: "",
         discountAmount: "",
-        duration: "",
-        isActive: true,
+       
       });
       fetchCoupons();
     } catch (error) {
@@ -123,7 +121,7 @@ const CouponManagement = () => {
                 placeholder="Enter discount amount"
               />
             </CardContent>
-            <CardContent>
+            {/* <CardContent>
               <Input
                 type="number"
                 id="duration"
@@ -149,7 +147,7 @@ const CouponManagement = () => {
               >
                 Is Active
               </label>
-            </CardContent>
+            </CardContent> */}
             <CardContent>
               <Button type="submit">Create Coupon</Button>
             </CardContent>
@@ -167,12 +165,12 @@ const CouponManagement = () => {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Discount Amount
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Duration
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Status
-              </th>
+              </th> */}
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Actions
               </th>
@@ -185,12 +183,12 @@ const CouponManagement = () => {
                 <td className="px-6 py-4 whitespace-nowrap">
                   {coupon.discountAmount}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap">
+                {/* <td className="px-6 py-4 whitespace-nowrap">
                   {coupon.duration}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   {coupon.isActive ? "Active" : "Inactive"}
-                </td>
+                </td> */}
                 <td className="px-6 py-4 whitespace-nowrap">
                   <Button onClick={() => handleDeleteClick(coupon._id)}>
                     Delete

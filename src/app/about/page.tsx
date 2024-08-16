@@ -19,18 +19,18 @@ function page() {
               alt="about-img"
               className="absolute top-0 w-full object-cover  h-[60vh] -z-10"
             />
-            <div className="absolute top-0 w-full object-cover bg-black opacity-[.3]  h-[60vh] -z-10"></div>
-            <h1 className="text-5xl md:text-7xl text-center text-white font-bold ">
+            <div className="absolute top-0 w-full object-cover bg-black opacity-[.5]  h-[60vh] -z-10"></div>
+            <h1 className="text-5xl md:text-7xl text-center text-[#E8AF30] font-bold ">
               About Us
             </h1>
           </div>
-          <div className=" py-20 px-5 bg-blue-800">
-            <div className="flex max-w-7xl mx-auto flex-col gap-5 text-yellow-500  ">
+          <div className=" py-20 px-5 bg-[#E8AF30] text-black">
+            <div className="flex max-w-7xl mx-auto flex-col gap-5   ">
               <div className="flex flex-col gap-2  ">
-                <h2 className="text-2xl md:text-4xl  font-bold ">
+                <h2 className="text-2xl md:text-4xl text-[#062c69] font-bold ">
                   Welcome to SkyCandy!
                 </h2>
-                <p className="text-white text-base">
+                <p className=" text-base">
                   {" "}
                   Established in 2004, SkyCandy has been a premier provider of
                   paragliding services in the picturesque region of Bir Billing.
@@ -40,8 +40,8 @@ function page() {
                 </p>
               </div>
               <div className="flex flex-col gap-2  ">
-                <h3 className="text-xl md:text-2xl  font-bold ">About Us:</h3>
-                <p className="text-white text-base">
+                <h3 className="text-xl md:text-2xl text-[#062c69] font-bold ">About Us:</h3>
+                <p className=" text-base">
                   {" "}
                   At SkyCandy, we believe in the magic of flight and the beauty
                   of nature. Our team of certified and passionate instructors
@@ -52,10 +52,10 @@ function page() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 ">
-                <h2 className="text-2xl md:text-4xl text-yellow-500 font-bold ">
+                <h2 className="text-2xl md:text-4xl text-[#062c69] font-bold ">
                   Founder
                 </h2>
-                <p className="text-white text-base">
+                <p className=" text-base">
                   {" "}
                   Manjeet Thakur, the founder and owner of SkyCandy, is a
                   passionate paragliding enthusiast with a vision to share the

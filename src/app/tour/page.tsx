@@ -19,7 +19,7 @@ function page() {
             width={1000}
             height={800}
             alt="tour image "
-            className="rounded"
+            className="rounded p-5 bg-[#E8AF30] shadow-lg"
           />
 
           <div className="flex flex-col gap-2 mt-6">
@@ -28,7 +28,7 @@ function page() {
               Experience the thrill of paragliding with our classic and premium
               rides that promise to take your breath away.
             </p>
-            <div className="border p-3 rounded bg-blue-0 border-blue-500  shadow-sm shadow-blue-500">
+            <div className=" p-3 rounded border-2 border-blue-500  shadow-sm shadow-blue-500">
               <p>
                 <strong className="text-blue-800">Classic: </strong>
                 <em>

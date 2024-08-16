@@ -124,68 +124,76 @@ const BlogForm: React.FC = () => {
   };
 
   return (
-    <div>
-      <Link
-        href="/dashboard/blog-dashboard"
-        className=" px-6 hover:bg-gray-900 p-2 bg-black text-white rounded"
-      >
-        Back
-      </Link>
-      <h1>Create a New Blog Post</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Content:</label>
-          <ReactQuill
-            value={content}
-            onChange={(value) => setContent(value)}
-            modules={{ toolbar: true }}
-            formats={[
-              "header",
-              "font",
-              "size",
-              "bold",
-              "italic",
-              "underline",
-              "list",
-              "bullet",
-              "indent",
-              "link",
-              "image",
-              "align",
-            ]}
-          />
-        </div>
-        <div>
-          <label>Author:</label>
-          <input
-            type="text"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Tags (comma-separated):</label>
-          <input
-            type="text"
-            value={tags}
-            onChange={(e) => setTags(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Image:</label>
-          <input type="file" onChange={handleImageChange} />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+    <div className="flex flex-col ">
+      <div className="p-6">
+        <Link
+          href="/dashboard/blog-dashboard"
+          className=" px-6 hover:bg-gray-900 p-2 bg-black text-white rounded"
+        >
+          Back
+        </Link>
+      </div>
+      <div className="flex flex-col mt-4 px-10">
+        <h1>Create a New Blog Post</h1>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label>Title:</label>
+            <input
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+              className="w-full border border-gray-300 rounded p-2"
+            />
+          </div>
+          <div>
+            <label>Content:</label>
+            <ReactQuill
+              value={content}
+              onChange={(value) => setContent(value)}
+              modules={{ toolbar: true }}
+              formats={[
+                "header",
+                "font",
+                "size",
+                "bold",
+                "italic",
+                "underline",
+                "list",
+                "bullet",
+                "indent",
+                "link",
+                "image",
+                "align",
+              ]}
+              
+            />
+          </div>
+          <div>
+            <label>Author:</label>
+            <input
+              type="text"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              className="w-full border border-gray-300 rounded p-2"
+            />
+          </div>
+          <div>
+            <label>Tags (comma-separated):</label>
+            <input
+              type="text"
+              value={tags}
+              onChange={(e) => setTags(e.target.value)}
+              className="w-full border border-gray-300 rounded p-2"
+            />
+          </div>
+          <div>
+            <label>Image: </label>
+            <input type="file" onChange={handleImageChange} />
+          </div>
+          <button type="submit" className="bg-[#3361AC] text-white p-3 md:w-72 font-bold rounded">Submit</button>
+        </form>
+      </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
     </div>
