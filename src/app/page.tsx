@@ -228,7 +228,7 @@ function Page() {
                 width={1000}
                 height={1000}
                 alt="BirMaskImg"
-                className="w-[100vw] lg:w-[45vw]   h-[50vh] lg:h-[60vh]  object-cover object-center"
+                className="w-[100vw] lg:w-[45vw] hidden md:block  h-[50vh] lg:h-[60vh]  object-cover object-center"
               />
             </Fade>
           </div>

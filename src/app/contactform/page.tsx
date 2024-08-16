@@ -84,18 +84,26 @@ const ContactPage: React.FC = () => {
 
      
       <div className="  w-full items-center justify-center flex flex-col  max-w-5xl mx-auto px-5 py-10 gap-5">
-        <div className="w-full  flex justify-center items-center gap-5 -mt-20 z-20">
-          <Card className=" w-full h-[30vh] bg-[#3361AC] text-white flex flex-col items-center justify-center border rounded-none">
+        <div className="w-full  flex flex-col md:flex-row justify-center items-center gap-5 -mt-24 z-20">
+          <Card className=" w-full h-[40vh] bg-[#3361AC] text-white flex flex-col items-center justify-center border rounded-none">
             <CardHeader>
-                <p ><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-phone text-[#E8AF30]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></p>
+                <p ><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-phone text-[#E8AF30]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></p>
             </CardHeader>
             <CardContent>
-              <p>
+              <p className="text-lg text-center font-bold">
                 <strong>Contact No :</strong> 9736333133, 7550733333
               </p>
             </CardContent>
+           
+           
+          </Card>
+          <Card className=" w-full h-[40vh] bg-[#3361AC] text-white flex flex-col items-center justify-center border rounded-none">
+            <CardHeader>
+                <p ><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="text-[#E8AF30] lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></p>
+            </CardHeader>
+           
             <CardContent>
-              <p>
+                <p className="text-lg text-center font-bold">
                 <strong> Email :</strong>{" "}
                   <a className="text-[#E8AF30] font-bold" href="mailto:manu@skycandy.in">
                   manu@skycandy.in
@@ -104,13 +112,13 @@ const ContactPage: React.FC = () => {
             </CardContent>
            
           </Card>
-            <Card className="border rounded-none w-full h-[30vh] bg-[#3361AC] flex flex-col items-center justify-center">
+            <Card className="border rounded-none w-full h-[40vh] bg-[#3361AC] flex flex-col items-center justify-center">
             <CardHeader>
                 <p ><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-map-pin text-[#E8AF30]"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg></p>
             </CardHeader>
            
             <CardContent>
-              <p className="px-10 text-xl text-white">
+              <p className="px-10 text-lg text-white">
                 <strong>Office: </strong> SkyCandy High Adventure Village Kotli,
                 Bir Billing Road, P.O. Bir, Distt Kangra HP (India) – 176077
               </p>
