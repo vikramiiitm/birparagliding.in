@@ -152,7 +152,11 @@ function Page() {
             <source src="../../video.mp4" type="video/mp4" />
           </video> */}
         </section>
-        <section className="h-[80vh]  relative">
+
+
+
+
+        {/* <section className="h-[80vh]  relative">
           <Image
             src={Sec2}
             width={1000}
@@ -160,13 +164,13 @@ function Page() {
             alt="BirMaskImg"
             className="w-full h-[80vh] object-cover left-0 object-center   absolute "
           />
-          {/* <Image
+          <Image
             src={Pattern}
             width={1000}
             height={1000}
             alt="BirMaskImg"
             className="w-full h-[40vh] lg:h-[60vh] object-cover left-0 object-center absolute top-0 -z-10 opacity-20"
-          /> */}
+          />
           <div className="flex h-full pb-10 justify-center items-end">
             <Fade direction="left" triggerOnce>
               <h1 className="text-center text-xl md:text-4xl  font-bold p-2 md:p-4 bg-gradient-to-tr from-[#F1C76B] to-[#DFA018] border rounded-[30px]  uppercase">
@@ -174,7 +178,15 @@ function Page() {
               </h1>
             </Fade>
           </div>
-        </section>
+        </section> */}
+
+
+
+
+
+
+
+
         <section className="bg-[#E8AF30] ">
           <div className="  flex flex-col-reverse lg:flex-row md:justify-between md:gap-8 items-center  ">
             <div className="pt-6 md:pt-0 lg:w-[50%] px-5 py-10 flex flex-col justify-center md:mx-auto">
