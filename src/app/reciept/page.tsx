@@ -23,12 +23,12 @@ interface UserRegistration {
   name: string;
   email: string;
   amount: number;
-  currency: string;
   orderId: string;
   timeSlot: string;
   phoneNumber: string;
   participants: number;
-  duration: string;
+  flypackage:string;
+  code:string;
   date: string;
   flyDate: string;
 }
@@ -156,28 +156,16 @@ function SuccessPage() {
                   <table className="w-full border-collapse">
                     <tbody>
                       <tr className="border-b">
+                        <td className="px-4 py-2 font-semibold">Registration ID:</td>
+                        <td className="px-4 py-2">{user.orderId}</td>
+                      </tr>
+                      <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Name:</td>
                         <td className="px-4 py-2">{user.name}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Email:</td>
                         <td className="px-4 py-2">{user.email}</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="px-4 py-2 font-semibold">Amount:</td>
-                        <td className="px-4 py-2">{user.amount}</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="px-4 py-2 font-semibold">Currency:</td>
-                        <td className="px-4 py-2">{user.currency}</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="px-4 py-2 font-semibold">Order ID:</td>
-                        <td className="px-4 py-2">{user.orderId}</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="px-4 py-2 font-semibold">Time Slot:</td>
-                        <td className="px-4 py-2">{user.timeSlot}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">
@@ -191,9 +179,25 @@ function SuccessPage() {
                         </td>
                         <td className="px-4 py-2">{user.participants}</td>
                       </tr>
+                     
                       <tr className="border-b">
-                        <td className="px-4 py-2 font-semibold">Duration:</td>
-                        <td className="px-4 py-2">{user.duration}</td>
+                        <td className="px-4 py-2 font-semibold">Coupon Code:</td>
+                        <td className="px-4 py-2">{user.code}</td>
+                      </tr>
+                     
+                      <tr className="border-b">
+                        <td className="px-4 py-2 font-semibold">Time Slot:</td>
+                        <td className="px-4 py-2">{user.timeSlot}</td>
+                      </tr>
+                     
+                    
+                      <tr className="border-b">
+                        <td className="px-4 py-2 font-semibold">Fly Package:</td>
+                        <td className="px-4 py-2">{user.flypackage}</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="px-4 py-2 font-semibold">Amount:</td>
+                        <td className="px-4 py-2">{user.amount}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Date:</td>

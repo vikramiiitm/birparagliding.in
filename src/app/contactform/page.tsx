@@ -178,7 +178,7 @@ const ContactPage: React.FC = () => {
               </CardContent>
 
               <CardContent>
-                  <Button type="submit" className="bg-[#E8AF30] text-black font-bold">Send Message</Button>
+                  <Button type="submit" className="bg-[#E8AF30] text-black hover:text-white font-bold">Send Message</Button>
               </CardContent>
             </Card>
 

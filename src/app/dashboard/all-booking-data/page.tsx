@@ -16,6 +16,10 @@ interface Booking {
   email: string;
   orderId: string;
   date: string;
+  timeSlot: string;
+  participants: string;
+  flyDate: string;
+  code:string;
 }
 
 
@@ -87,7 +91,7 @@ const Dashboard = () => {
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-white">
+            <table className="min-w-full">
               <thead>
                 <tr>
                   <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
@@ -95,6 +99,15 @@ const Dashboard = () => {
                   </th>
                   <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
                     Package
+                  </th>
+                  <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
+                    Code
+                  </th>
+                  <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
+                    Time Slot
+                  </th>
+                  <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
+                    Guests
                   </th>
                   <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
                     Amount
@@ -109,7 +122,7 @@ const Dashboard = () => {
                     Order ID
                   </th>
                   <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
-                    Date
+                    Fly Date
                   </th>
                 </tr>
               </thead>
@@ -121,6 +134,15 @@ const Dashboard = () => {
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.flypackage}
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                      {booking.code}
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                      {booking.timeSlot}
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                      {booking.participants}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.amount}
@@ -135,7 +157,11 @@ const Dashboard = () => {
                       {booking.orderId}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-                      {new Date(booking.date).toLocaleString()}
+                      {new Date(booking.flyDate).toLocaleDateString('en-IN', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                      })}
                     </td>
                   </tr>
                 ))}
