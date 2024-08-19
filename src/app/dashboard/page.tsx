@@ -225,6 +225,9 @@ const Dashboard = () => {
                     Package
                   </th>
                   <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
+                    Coupon Code
+                  </th>
+                  <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
                     Amount
                   </th>
                   <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-gray-600 tracking-wider">
@@ -249,6 +252,9 @@ const Dashboard = () => {
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.flypackage}
+                    </td>
+                    <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+                      {booking.code}
                     </td>
                     <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
                       {booking.amount}
