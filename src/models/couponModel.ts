@@ -4,8 +4,8 @@ import mongoose, { Schema, Document } from "mongoose";
 interface ICoupon extends Document {
   code: string;
   discountAmount: number;
-  duration: number; // Duration in days
-  isActive: boolean;
+  // duration: number; // Duration in days
+  // isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -23,15 +23,15 @@ const CouponSchema: Schema = new Schema({
     required: true,
     min: 0,
   },
-  duration: {
-    type: Number,
-    required: true,
-    min: 1, // Minimum duration of 1 day
-  },
-  isActive: {
-    type: Boolean,
-    default: true,
-  },
+  // duration: {
+  //   type: Number,
+  //   required: true,
+  //   min: 1, // Minimum duration of 1 day
+  // },
+  // isActive: {
+  //   type: Boolean,
+  //   default: true,
+  // },
   createdAt: {
     type: Date,
     default: Date.now,
