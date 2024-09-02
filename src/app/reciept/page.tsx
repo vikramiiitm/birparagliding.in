@@ -155,7 +155,7 @@ function SuccessPage() {
               </CardHeader>
               {registrations.map((user) => (
                 <CardContent key={user._id} className="relative w-[60%] md:w-full ">
-                  <span className="absolute text-[4rem] md:text-[7rem] -rotate-45 bottom-48 left-4 md:left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
+                  <span className="absolute text-[4rem] md:text-[6rem] -rotate-45 bottom-48 left-4 md:left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
                   <table className="w-full text-sm md:text-base">
                     <tbody >
                       <tr className="border-b">
