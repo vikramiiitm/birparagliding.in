@@ -154,13 +154,13 @@ function SuccessPage() {
                 <CardTitle>Your Details</CardTitle>
               </CardHeader>
               {registrations.map((user) => (
-                <CardContent key={user._id} className="relative overflow-hidden">
+                <CardContent key={user._id} className="relative">
                   <span className="absolute text-[3rem] md:text-[7rem] -rotate-45 bottom-48 left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
                   <table className="w-full border-collapse ">
                     <tbody>
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Registration ID:</td>
-                        <td className="px-4 py-2">{user.orderId}</td>
+                        <td className="px-2 py-2 ">{user.orderId}</td>
                       </tr>
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Name:</td>
