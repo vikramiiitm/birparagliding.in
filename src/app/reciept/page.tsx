@@ -84,7 +84,7 @@ function SuccessPage() {
   return (
     <>
     <Navbar/>
-      <div className="flex flex-col justify-around items-center p-10 h-full py-32">
+      <div className="flex flex-col justify-around items-center p-5 h-full py-32">
         {/* Search Form */}
         <Card className="w-full md:w-96 mb-8  border ">
           <CardHeader>
@@ -149,13 +149,13 @@ function SuccessPage() {
 
         {registrations.length > 0 && (
           <div className=" w-full md:w-[80%] md:mx-auto ">
-            <Card className="px-5 w-full md:w-[80vw] h-full  pb-5 mt-4 bg-transparent">
+            <Card className=" w-full md:w-[80vw] h-full  pb-5 mt-4 bg-transparent">
               <CardHeader>
                 <CardTitle>Your Details</CardTitle>
               </CardHeader>
               {registrations.map((user) => (
                 <CardContent key={user._id} className="relative overflow-hidden">
-                  <span className="absolute text-3xl md:text-[7rem] -rotate-45 bottom-40 left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
+                  <span className="absolute text-[3rem] md:text-[7rem] -rotate-45 bottom-48 left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
                   <table className="w-full border-collapse ">
                     <tbody>
                       <tr className="border-b">
