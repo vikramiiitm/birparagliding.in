@@ -149,7 +149,7 @@ function SuccessPage() {
 
         {registrations.length > 0 && (
           <div className=" w-full md:w-[80%] md:mx-auto ">
-            <Card className=" w-full md:w-[80vw] h-full  pb-5 mt-4 bg-transparent">
+            <Card className=" w-full md:w-[80vw] h-full  p-5 mt-4 bg-transparent">
               <CardHeader>
                 <CardTitle>Your Details</CardTitle>
               </CardHeader>
