@@ -38,10 +38,8 @@ function SuccessPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchParams, setSearchParams] = useState({
-    name: "",
+    // name: "",
     email: "",
-    phoneNumber: "",
-    participants: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,10 +56,8 @@ function SuccessPage() {
     setError(null);
 
     if (
-      !searchParams.name ||
-      !searchParams.email ||
-      !searchParams.phoneNumber ||
-      !searchParams.participants
+      // !searchParams.name ||
+      !searchParams.email 
     ) {
       setError("Please fill out all fields.");
       setLoading(false);
@@ -88,22 +84,22 @@ function SuccessPage() {
   return (
     <>
     <Navbar/>
-      <div className="flex flex-col justify-around items-center p-10">
+      <div className="flex flex-col justify-around items-center p-10 h-full py-32">
         {/* Search Form */}
-        <Card className="w-full md:w-96 mb-8">
+        <Card className="w-full md:w-96 mb-8  border ">
           <CardHeader>
             <CardTitle>Find Your Receipt</CardTitle>
           </CardHeader>
           <form onSubmit={handleSubmit}>
             <CardContent className="flex flex-col gap-2">
-              <Input
+              {/* <Input
                 id="name"
                 name="name"
                 type="text"
                 value={searchParams.name}
                 onChange={handleChange}
                 placeholder="Name"
-              />
+              /> */}
               <Input
                 id="email"
                 name="email"
@@ -112,7 +108,13 @@ function SuccessPage() {
                 onChange={handleChange}
                 placeholder="Email"
               />
-              <Input
+              {/* <Input
+                type="date"
+                required
+                value={searchParams.flyDate}
+                onChange={handleChange}
+              /> */}
+              {/* <Input
                 id="phoneNumber"
                 name="phoneNumber"
                 type="text"
@@ -127,7 +129,7 @@ function SuccessPage() {
                 value={searchParams.participants}
                 onChange={handleChange}
                 placeholder="Participants"
-              />
+              /> */}
               <Button
                 type="submit"
                 className="bg-black text-white hover:bg-gray-100 hover:border hover:text-black"
@@ -146,14 +148,15 @@ function SuccessPage() {
         )}
 
         {registrations.length > 0 && (
-          <div className="w-[80%] mx-auto">
-            <Card className="px-5 w-full md:w-[80vw] h-full  pb-5 mt-4">
+          <div className="w-[80%] mx-auto ">
+            <Card className="px-5 w-full md:w-[80vw] h-full  pb-5 mt-4 bg-transparent">
               <CardHeader>
                 <CardTitle>Your Details</CardTitle>
               </CardHeader>
               {registrations.map((user) => (
-                <CardContent key={user._id}>
-                  <table className="w-full border-collapse">
+                <CardContent key={user._id} className="relative">
+                  <span className="absolute text-[7rem] -rotate-45 bottom-40 left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
+                  <table className="w-full border-collapse ">
                     <tbody>
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Registration ID:</td>
