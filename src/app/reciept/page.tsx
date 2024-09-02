@@ -149,15 +149,15 @@ function SuccessPage() {
 
         {registrations.length > 0 && (
           <div className=" w-full md:w-[80%] md:mx-auto ">
-            <Card className=" w-full md:w-[80vw] h-full  p-5 mt-4 bg-transparent">
+            <Card className=" w-full md:w-[80vw] h-full  p-0  mt-4 bg-transparent">
               <CardHeader>
                 <CardTitle>Your Details</CardTitle>
               </CardHeader>
               {registrations.map((user) => (
-                <CardContent key={user._id} className="relative">
-                  <span className="absolute text-[3rem] md:text-[7rem] -rotate-45 bottom-48 left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
-                  <table className="w-full border-collapse overflow-auto text-sm md:text-base">
-                    <tbody>
+                <CardContent key={user._id} className="relative w-[60%] ">
+                  <span className="absolute text-[4rem] md:text-[7rem] -rotate-45 bottom-48 left-4 md:left-28 text-bold text-gray-100 -z-20">SKYCANDY</span>
+                  <table className="text-sm md:text-base">
+                    <tbody >
                       <tr className="border-b">
                         <td className="px-4 py-2 font-semibold">Registration ID:</td>
                         <td className="px-4 py-2 ">{user.orderId}</td>
