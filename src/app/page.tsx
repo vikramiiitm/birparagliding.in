@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+import PopUp from '@/components/PopUp';
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -109,6 +109,7 @@ function Page() {
   return (
     <>
       <Navbar />
+      <div><PopUp/></div>
       <div>
         <section className="relative  w-full h-full  flex justify-between overflow-hidden items-center  flex-col-reverse lg:flex-row">
           <div className=" px-10 pt-0 top-[60px] md:pt-36 text-center absolute w-full flex-col flex h-full items-center justify-center gap-3 md:gap-10">
